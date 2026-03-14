@@ -4,14 +4,16 @@ import os
 from dotenv import load_dotenv
 
 
-def export_ranking_to_json(db_name, output_file):
-    # set connection to sqlite database
-    conn = sqlite3.connect(db_name)
-    conn.row_factory = sqlite3.Row
-    c = conn.cursor()
+# this function creates the filepath for files in the data folder
+def data_path_for(file):
+    load_dotenv()
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    data_path_env = os.getenv("DATA_PATH")
+    data_path = os.path.join(script_dir, data_path_env)
+    return data_path + file
 
-    # query the data
-    query = '''
+
+query_total_ranking = """
     SELECT
         p.name AS player_name,
         p.shirt_number,
@@ -26,7 +28,14 @@ def export_ranking_to_json(db_name, output_file):
         pp.player_id
     ORDER BY
         total_points DESC;
-'''
+"""
+
+
+def export_ranking_to_json(db_name, output_file, query):
+    # set connection to sqlite database
+    conn = sqlite3.connect(db_name)
+    conn.row_factory = sqlite3.Row
+    c = conn.cursor()
 
     # make query
     c.execute(query)
@@ -38,16 +47,15 @@ def export_ranking_to_json(db_name, output_file):
         ranking_list.append(dict(row))
 
     # save json
-    with open(output_file, 'w', encoding='utf-8') as f:
+    with open(output_file, "w", encoding="utf-8") as f:
         json.dump(ranking_list, f, indent=4, ensure_ascii=False)
 
     conn.close()
-    print(f'Ranking was exported succesfully to {output_file}.')
+    print(f"Ranking was exported succesfully to {output_file}.")
 
 
-load_dotenv()
-db_path_env = os.getenv('DB_PATH')
-script_dir = os.path.dirname(os.path.abspath(__file__))
-db_path = os.path.join(script_dir, db_path_env)
-json_path = os.path.join(script_dir, '../data/player_ranking.json')
-export_ranking_to_json(db_name=db_path, output_file=json_path)
+export_ranking_to_json(
+    db_name=data_path_for("data.db"),
+    output_file=data_path_for("player_ranking.json"),
+    query=query_total_ranking,
+)
