@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('../../data/player_ranking.json')
+    fetch('data/player_ranking.json')
         .then(response => response.json())
         .then(data => {
             const tableBody = document.getElementById('ranking-body');
