@@ -5,22 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VfBSTR - Spieler der Saison</title>
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
 </head>
 
 <body>
     <h1>VfBSTR - Spieler der Saison</h1>
-    <table id="ranking">
-        <thead>
-            <tr>
-                <th>Platz</th>
-                <th>Name</th>
-                <th>Rückennummer</th>
-                <th>Punkte</th>
-            </tr>
-        </thead>
-        <tbody id="ranking-body"></tbody>
-    </table>
+    <div class="ranking-container">
+        <h2>Gesamtplatzierung</h2>
+        <table class="ranking-table" id="total-ranking">
+            <thead>
+                <tr>
+                    <th>Platz</th>
+                    <th>Name</th>
+                    <th>Rückennummer</th>
+                    <th>Punkte</th>
+                </tr>
+            </thead>
+            <tbody id="ranking-body"></tbody>
+        </table>
+    </div>
 </body>
 
 </html>
