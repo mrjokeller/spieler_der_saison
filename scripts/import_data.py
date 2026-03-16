@@ -1,17 +1,18 @@
 import sqlite3
 import json
 import os
-from dotenv import load_dotenv
+
+DB_PATH = '/../data/'
+JSON_PATH = '/../docs/data/'
 
 
 # this function creates the filepath for files in the data folder
-def data_path_for(file):
-    load_dotenv()
+def data_path(file):
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    data_path_env = os.getenv("DATA_PATH")
-    data_path = os.path.join(script_dir, data_path_env)
-    return data_path + file
-
+    file_type = JSON_PATH if file.split('.')[1] == 'json' else DB_PATH
+    path = script_dir + file_type + file
+    print(path)
+    return path
 
 query_total_ranking = """
     SELECT
@@ -55,7 +56,7 @@ def export_ranking_to_json(db_name, output_file, query):
 
 
 export_ranking_to_json(
-    db_name=data_path_for("data.db"),
-    output_file=data_path_for("player_ranking.json"),
+    db_name=data_path("data.db"),
+    output_file=data_path("player_ranking.json"),
     query=query_total_ranking,
 )
