@@ -18,9 +18,7 @@ query_total_ranking = """
     SELECT
         p.name AS player_name,
         p.shirt_number,
-        SUM(pp.points) AS total_points,
-        COUNT(pp.game_id) AS played_games,
-        AVG(pp.points) AS avg_points
+        SUM(pp.points) AS total_points
     FROM
         player_points pp
     JOIN

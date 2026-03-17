@@ -2,183 +2,141 @@
     {
         "player_name": "Deniz Undav",
         "shirt_number": 26,
-        "total_points": 55,
-        "played_games": 38,
-        "avg_points": 1.4473684210526316
+        "total_points": 59
     },
     {
         "player_name": "Jeff Chabot",
         "shirt_number": 24,
-        "total_points": 39,
-        "played_games": 32,
-        "avg_points": 1.21875
-    },
-    {
-        "player_name": "Jamie Leweling",
-        "shirt_number": 18,
-        "total_points": 35,
-        "played_games": 36,
-        "avg_points": 0.9722222222222222
-    },
-    {
-        "player_name": "Maximilian Mittelstädt",
-        "shirt_number": 7,
-        "total_points": 32,
-        "played_games": 38,
-        "avg_points": 0.8421052631578947
-    },
-    {
-        "player_name": "Bilal El Khannouss",
-        "shirt_number": 11,
-        "total_points": 31,
-        "played_games": 30,
-        "avg_points": 1.0333333333333334
+        "total_points": 42
     },
     {
         "player_name": "Alexander Nübel",
         "shirt_number": 33,
-        "total_points": 29,
-        "played_games": 39,
-        "avg_points": 0.7435897435897436
+        "total_points": 42
     },
     {
-        "player_name": "Ermedin Demirovic",
-        "shirt_number": 9,
-        "total_points": 28,
-        "played_games": 18,
-        "avg_points": 1.5555555555555556
+        "player_name": "Jamie Leweling",
+        "shirt_number": 18,
+        "total_points": 41
     },
     {
-        "player_name": "Angelo Stiller",
-        "shirt_number": 6,
-        "total_points": 23,
-        "played_games": 39,
-        "avg_points": 0.5897435897435898
-    },
-    {
-        "player_name": "Tiago Tomas",
-        "shirt_number": 8,
-        "total_points": 21,
-        "played_games": 30,
-        "avg_points": 0.7
-    },
-    {
-        "player_name": "Chema",
-        "shirt_number": 30,
-        "total_points": 20,
-        "played_games": 27,
-        "avg_points": 0.7407407407407407
-    },
-    {
-        "player_name": "Nikolas Nartey",
-        "shirt_number": 28,
-        "total_points": 18,
-        "played_games": 26,
-        "avg_points": 0.6923076923076923
-    },
-    {
-        "player_name": "Chris Führich",
-        "shirt_number": 10,
-        "total_points": 18,
-        "played_games": 34,
-        "avg_points": 0.5294117647058824
+        "player_name": "Maximilian Mittelstädt",
+        "shirt_number": 7,
+        "total_points": 33
     },
     {
         "player_name": "Ramon Hendriks",
         "shirt_number": 3,
-        "total_points": 18,
-        "played_games": 27,
-        "avg_points": 0.6666666666666666
+        "total_points": 32
+    },
+    {
+        "player_name": "Bilal El Khannouss",
+        "shirt_number": 11,
+        "total_points": 31
+    },
+    {
+        "player_name": "Chris Führich",
+        "shirt_number": 10,
+        "total_points": 29
+    },
+    {
+        "player_name": "Ermedin Demirovic",
+        "shirt_number": 9,
+        "total_points": 28
+    },
+    {
+        "player_name": "Angelo Stiller",
+        "shirt_number": 6,
+        "total_points": 24
+    },
+    {
+        "player_name": "Nikolas Nartey",
+        "shirt_number": 28,
+        "total_points": 23
+    },
+    {
+        "player_name": "Tiago Tomas",
+        "shirt_number": 8,
+        "total_points": 21
+    },
+    {
+        "player_name": "Chema",
+        "shirt_number": 30,
+        "total_points": 20
     },
     {
         "player_name": "Dan-Axel Zagadou",
         "shirt_number": 23,
-        "total_points": 14,
-        "played_games": 8,
-        "avg_points": 1.75
+        "total_points": 14
     },
     {
         "player_name": "Luca Jaquez",
         "shirt_number": 14,
-        "total_points": 14,
-        "played_games": 17,
-        "avg_points": 0.8235294117647058
+        "total_points": 14
     },
     {
         "player_name": "Lorenz Assignon",
         "shirt_number": 22,
-        "total_points": 14,
-        "played_games": 27,
-        "avg_points": 0.5185185185185185
-    },
-    {
-        "player_name": "Josha Vagnoman",
-        "shirt_number": 4,
-        "total_points": 9,
-        "played_games": 24,
-        "avg_points": 0.375
+        "total_points": 14
     },
     {
         "player_name": "Finn Jeltsch",
         "shirt_number": 29,
-        "total_points": 7,
-        "played_games": 19,
-        "avg_points": 0.3684210526315789
-    },
-    {
-        "player_name": "Badredine Bouanani",
-        "shirt_number": 27,
-        "total_points": 6,
-        "played_games": 20,
-        "avg_points": 0.3
+        "total_points": 12
     },
     {
         "player_name": "Atakan Karazor",
         "shirt_number": 16,
-        "total_points": 5,
-        "played_games": 25,
-        "avg_points": 0.2
+        "total_points": 11
+    },
+    {
+        "player_name": "Josha Vagnoman",
+        "shirt_number": 4,
+        "total_points": 11
+    },
+    {
+        "player_name": "Badredine Bouanani",
+        "shirt_number": 27,
+        "total_points": 6
     },
     {
         "player_name": "Fabian Bredlow",
         "shirt_number": 1,
-        "total_points": 5,
-        "played_games": 4,
-        "avg_points": 1.25
+        "total_points": 5
     },
     {
         "player_name": "Nick Woltemade",
         "shirt_number": 11,
-        "total_points": 3,
-        "played_games": 6,
-        "avg_points": 0.5
+        "total_points": 3
     },
     {
         "player_name": "Lazar Jovanovic",
         "shirt_number": 45,
-        "total_points": 3,
-        "played_games": 8,
-        "avg_points": 0.375
+        "total_points": 3
     },
     {
         "player_name": "Ameen Al-Dakhil",
         "shirt_number": 2,
-        "total_points": 3,
-        "played_games": 9,
-        "avg_points": 0.3333333333333333
+        "total_points": 3
+    },
+    {
+        "player_name": "Yanik Spalt",
+        "shirt_number": 56,
+        "total_points": 1
+    },
+    {
+        "player_name": "Jeremy Arevalo",
+        "shirt_number": 25,
+        "total_points": 0
     },
     {
         "player_name": "Leonidas Stergiou",
         "shirt_number": 20,
-        "total_points": 0,
-        "played_games": 1,
-        "avg_points": 0.0
+        "total_points": 0
     },
     {
         "player_name": "Pascal Stenzel",
         "shirt_number": 15,
-        "total_points": 0,
-        "played_games": 2,
-        "avg_points": 0.0
+        "total_points": 0
     }
 ]
