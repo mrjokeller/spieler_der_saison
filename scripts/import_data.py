@@ -2,29 +2,48 @@ import sqlite3
 import json
 import os
 
-DB_PATH = '/../data/'
-JSON_PATH = '/../docs/data/'
+DB_PATH = "/../data/"
+JSON_PATH = "/../docs/data/"
 
 
 # this function creates the filepath for files in the data folder
 def data_path(file):
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    file_type = JSON_PATH if file.split('.')[1] == 'json' else DB_PATH
-    path = script_dir + file_type + file
-    print(path)
-    return path
+    file_type = JSON_PATH if file.split(".")[1] == "json" else DB_PATH
+    return script_dir + file_type + file
+
 
 query_total_ranking = """
+    WITH player_minutes AS (
+        -- sum total minutes per player (regardless of player_points)
+        SELECT
+            player_id,
+            SUM(minutes) AS total_minutes
+        FROM
+            player_data
+        GROUP BY
+            player_id
+    )
     SELECT
+        p.player_id AS player_id,
         p.name AS player_name,
-        p.shirt_number,
-        SUM(pp.points) AS total_points
+        MAX(p.shirt_number) AS shirt_number,
+        SUM(pp.points) AS total_points,
+        COUNT(DISTINCT pp.game_id) AS games_played,
+        pm.total_minutes,  -- minutes from aggregated table
+        CASE
+            WHEN pm.total_minutes >= 90
+            THEN ROUND((SUM(pp.points) * 90.0 / NULLIF(pm.total_minutes, 0)), 2)
+            ELSE NULL
+        END AS points_per_90_minutes
     FROM
         player_points pp
     JOIN
         player p ON pp.player_id = p.player_id
+    LEFT JOIN
+        player_minutes pm ON pp.player_id = pm.player_id
     GROUP BY
-        pp.player_id
+        p.player_id, p.name
     ORDER BY
         total_points DESC;
 """
