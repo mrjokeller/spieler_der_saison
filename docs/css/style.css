@@ -3,7 +3,7 @@ body {
     background-color: #121212;
     color: #ffffff;
     margin: 0;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 .ranking-container {
@@ -13,6 +13,7 @@ body {
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    margin-top: 32px;
 }
 
 .ranking-container h2 {
@@ -102,3 +103,49 @@ body {
 .ranking-table tr:hover {
     background-color: rgba(255, 255, 255, 0.05);
 }
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin-left: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #cc1515;
+}
+
