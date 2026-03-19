@@ -49,6 +49,22 @@ body {
     border-bottom: none;
 }
 
+/* mobile view without Spiele, Minuten and Punkte/90 */
+@media (max-width: 768px) {
+    .ranking-table th:nth-child(3),
+    .ranking-table th:nth-child(4),
+    .ranking-table th:nth-child(5),
+    .ranking-table td:nth-child(3),
+    .ranking-table td:nth-child(4),
+    .ranking-table td:nth-child(5) {
+        display: none;
+    }
+
+    .shirt-number {
+        display: none;
+    }
+}
+
 /* position colors */
 .ranking-table tr.rank-1 {
     background: linear-gradient(90deg, rgba(255, 215, 0, 0.15) 0%, rgba(255, 215, 0, 0) 100%);
@@ -69,6 +85,7 @@ body {
 .ranking-table td:last-child {
     font-weight: bold;
     color: #4caf50;
+    text-align: right;
 }
 
 /* shirt numbers */
