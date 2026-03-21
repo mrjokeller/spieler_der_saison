@@ -157,3 +157,7 @@ a {
 .navbar a:hover {
     color: var(--vfb_red);
 }
+
+.chart {
+    margin: 32px;
+}

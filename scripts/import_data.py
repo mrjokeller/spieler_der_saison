@@ -48,6 +48,54 @@ query_total_ranking = """
         total_points DESC;
 """
 
+query_line_chart = """
+    WITH game_order AS (
+        SELECT
+            game_id,
+            ROW_NUMBER() OVER (ORDER BY date) AS game_sequence
+        FROM games
+    ),
+    player_points_with_sequence AS (
+        SELECT
+            p.player_id,
+            p.name AS player_name,
+            go.game_sequence,
+            COALESCE(SUM(pp.points), 0) AS points
+        FROM
+            game_order go
+        CROSS JOIN
+            player p
+        LEFT JOIN
+            player_points pp ON p.player_id = pp.player_id AND go.game_id = pp.game_id
+        GROUP BY
+            p.player_id, p.name, go.game_sequence, go.game_id
+    ),
+    cumulative_points AS (
+        SELECT
+            player_id,
+            player_name,
+            game_sequence,
+            points,
+            SUM(points) OVER (
+                PARTITION BY player_id
+                ORDER BY game_sequence
+                ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+            ) AS cumulative_points
+        FROM
+            player_points_with_sequence
+    )
+    SELECT
+        player_name AS label,
+        GROUP_CONCAT(cumulative_points, ', ') AS data
+    FROM
+        cumulative_points
+    GROUP BY
+        player_name
+    ORDER BY
+        player_name;
+
+"""
+
 
 def export_ranking_to_json(db_name, output_file, query):
     # set connection to sqlite database
@@ -72,8 +120,37 @@ def export_ranking_to_json(db_name, output_file, query):
     print(f"Ranking was exported succesfully to {output_file}.")
 
 
+def export_to_chart(db_name, output_file, query):
+    # set connection to sqlite database
+    conn = sqlite3.connect(db_name)
+    conn.row_factory = sqlite3.Row
+    c = conn.cursor()
+
+    # make query
+    c.execute(query)
+    ranking = c.fetchall()
+
+    chart_data = []
+    for label, data_str in ranking:
+        data = [int(point) for point in data_str.split(", ")]
+        chart_data.append({"label": label, "data": data, "fill": False})
+
+    # save json
+    with open(output_file, "w", encoding="utf-8") as f:
+        json.dump(chart_data, f, indent=4, ensure_ascii=False)
+
+    conn.close()
+    print(f"Ranking was exported succesfully to {output_file}.")
+
+
 export_ranking_to_json(
     db_name=data_path("data.db"),
     output_file=data_path("player_ranking.json"),
     query=query_total_ranking,
+)
+
+export_to_chart(
+    db_name=data_path("data.db"),
+    output_file=data_path("line_chart_data.json"),
+    query=query_line_chart,
 )
