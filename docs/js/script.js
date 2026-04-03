@@ -1,24 +1,56 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('data/player_ranking.json')
+    // Standardmäßig die Gesamtplatzierung laden
+    loadRankingData('total', 'player_ranking.json');
+
+    // register tab-button-listener
+    document.querySelectorAll('.tab-button').forEach(button => {
+        button.addEventListener('click', () => {
+            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.style.display = 'none');
+
+            // add active class to clicked tab
+            button.classList.add('active');
+
+            // show corresponding content
+            const tabId = button.getAttribute('data-tab');
+            console.log(tabId);
+            document.getElementById(tabId).style.display = 'block';
+
+            // load data for selected tab
+            const jsonFiles = {
+                total: 'player_ranking.json',
+                community: 'player_ranking_community.json',
+                riky: 'player_ranking_riky.json',
+                sebastian: 'player_ranking_sebastian.json'
+            };
+
+            loadRankingData(tabId, jsonFiles[tabId]);
+        });
+    });
+});
+
+// load data and populate table
+function loadRankingData(tabId, jsonFile) {
+    fetch(`data/${jsonFile}`)
         .then(response => response.json())
         .then(data => {
-            const tableBody = document.getElementById('ranking-body');
+            const tableBody = document.getElementById(`ranking-body-${tabId}`);
+            tableBody.innerHTML = '';
+
             data.forEach((player, index) => {
                 const row = document.createElement('tr');
-                // Fügt eine Klasse gemäß dem Rang des Spielers hinzu (rank-1, rank-2, rank-3 für das Podium)
                 if (index < 3) {
                     row.classList.add(`rank-${index + 1}`);
                 }
 
-                // Rank
+                // Platz
                 const rankCell = document.createElement('td');
                 rankCell.textContent = (index + 1).toString();
                 row.appendChild(rankCell);
 
-                // Spieler-Spalte mit Trikotnummer und Name
+                // Spieler
                 const playerCell = document.createElement('td');
-                playerCell.innerHTML =
-                    `<span class="shirt-number">${player.shirt_number}</span> ${player.player_name}`;
+                playerCell.innerHTML = `<span class="shirt-number">${player.shirt_number}</span> ${player.player_name}`;
                 row.appendChild(playerCell);
 
                 // Spiele
@@ -44,23 +76,5 @@ document.addEventListener('DOMContentLoaded', function () {
                 tableBody.appendChild(row);
             });
         })
-        .catch(error => console.error('Fehler beim Laden der Daten:', error));
-
-    // Tabs
-    document.querySelectorAll('.tab-button').forEach(button => {
-        button.addEventListener('click', () => {
-            console.log('hello, world');
-
-            // Entferne die 'active'-Klasse von allen Tabs und Inhalten
-            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-            document.querySelectorAll('.tab-content').forEach(content => content.style.display = 'none');
-
-            // Füge die 'active'-Klasse zum geklickten Tab hinzu
-            button.classList.add('active');
-
-            // Zeige den passenden Tab-Inhalt an
-            const tabId = button.getAttribute('data-tab');
-            document.getElementById(tabId).style.display = 'block';
-        });
-    });
-});
+        .catch(error => console.error(`Fehler beim Laden der Daten für ${tabId}:`, error));
+}

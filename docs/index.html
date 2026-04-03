@@ -31,13 +31,13 @@
     </header>
     <div class="ranking-container">
         <div class="tab-group">
-            <button class="tab-button active" data-tab="gesamt">Gesamtplatzierung</button>
+            <button class="tab-button active" data-tab="total">Gesamtplatzierung</button>
             <button class="tab-button" data-tab="community">Community</button>
             <button class="tab-button" data-tab="riky">Riky</button>
             <button class="tab-button" data-tab="sebastian">Sebastian</button>
         </div>
 
-        <div class="tab-content active" id="gesamt">
+        <div class="tab-content active" id="total">
             <table class="ranking-table" id="total-ranking">
                 <thead>
                     <tr>
@@ -49,25 +49,61 @@
                         <th>Punkte</th>
                     </tr>
                 </thead>
-                <tbody id="ranking-body"></tbody>
+                <tbody id="ranking-body-total"></tbody>
             </table>
         </div>
 
         <div class="tab-content" id="community" style="display: none;">
-            <p>Hier werden die Daten der Community angezeigt.</p>
+            <table class="ranking-table" id="community-ranking">
+                <thead>
+                    <tr>
+                        <th>Platz</th>
+                        <th>Spieler</th>
+                        <th>Spiele</th>
+                        <th>Minuten</th>
+                        <th>Punkte/90min</th>
+                        <th>Punkte</th>
+                    </tr>
+                </thead>
+                <tbody id="ranking-body-community"></tbody>
+            </table>
         </div>
 
         <div class="tab-content" id="riky" style="display: none;">
-            <p>Hier werden Rikys Daten angezeigt.</p>
+            <table class="ranking-table" id="riky-ranking">
+                <thead>
+                    <tr>
+                        <th>Platz</th>
+                        <th>Spieler</th>
+                        <th>Spiele</th>
+                        <th>Minuten</th>
+                        <th>Punkte/90min</th>
+                        <th>Punkte</th>
+                    </tr>
+                </thead>
+                <tbody id="ranking-body-riky"></tbody>
+            </table>
         </div>
 
         <div class="tab-content" id="sebastian" style="display: none;">
-            <p>Hier werden Sebastians Daten angezeigt.</p>
+            <table class="ranking-table" id="sebastian-ranking">
+                <thead>
+                    <tr>
+                        <th>Platz</th>
+                        <th>Spieler</th>
+                        <th>Spiele</th>
+                        <th>Minuten</th>
+                        <th>Punkte/90min</th>
+                        <th>Punkte</th>
+                    </tr>
+                </thead>
+                <tbody id="ranking-body-sebastian"></tbody>
+            </table>
         </div>
     </div>
-    <div class="chart">
+    <!-- <div class="chart">
         <canvas id="line-chart"></canvas>
-    </div>
+    </div> -->
     <footer class="footer" style="text-align: center; margin: 32px;">
         <a href="https://github.com/mrjokeller/spieler_der_saison">GitHub</a>
     </footer>
