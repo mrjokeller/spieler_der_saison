@@ -50,12 +50,14 @@ query_total_ranking = """
 
 query_line_chart = """
     WITH game_order AS (
+        -- Spiele in der richtigen Reihenfolge (nach Datum)
         SELECT
             game_id,
             ROW_NUMBER() OVER (ORDER BY date) AS game_sequence
         FROM games
     ),
     player_points_with_sequence AS (
+        -- Punkte pro Spieler und Spiel, mit Spiel-Reihenfolge
         SELECT
             p.player_id,
             p.name AS player_name,
@@ -71,6 +73,7 @@ query_line_chart = """
             p.player_id, p.name, go.game_sequence, go.game_id
     ),
     cumulative_points AS (
+        -- Laufende Summe der Punkte pro Spieler
         SELECT
             player_id,
             player_name,
@@ -83,16 +86,37 @@ query_line_chart = """
             ) AS cumulative_points
         FROM
             player_points_with_sequence
+    ),
+    total_points_per_player AS (
+        -- Gesamtpunkte pro Spieler berechnen
+        SELECT
+            player_id,
+            player_name,
+            MAX(cumulative_points) AS total_points  -- Letzter Wert der kumulativen Summe = Gesamtpunkte
+        FROM
+            cumulative_points
+        GROUP BY
+            player_id, player_name
     )
+    -- Top 10 Spieler nach Gesamtpunkten
     SELECT
-        player_name AS label,
-        GROUP_CONCAT(cumulative_points, ', ') AS data
+        cp.player_name AS label,
+        GROUP_CONCAT(cp.cumulative_points, ', ') AS data
     FROM
-        cumulative_points
+        cumulative_points cp
+    JOIN
+        total_points_per_player tp ON cp.player_id = tp.player_id
+    WHERE
+        tp.player_id IN (
+            SELECT player_id
+            FROM total_points_per_player
+            ORDER BY total_points DESC
+            LIMIT 10
+        )
     GROUP BY
-        player_name
+        cp.player_name
     ORDER BY
-        player_name;
+        tp.total_points DESC;
 
 """
 
