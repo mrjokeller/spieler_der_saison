@@ -19,31 +19,51 @@
                     <h1>VfBSTR - Spieler der Saison</h1>
                 </a>
             </div>
-            <nav class="navbar">
+            <!-- <nav class="navbar">
                 <ul>
                     <li><a href="#">Gesamtplatzierung</a></li>
                     <li><a href="#">Entwicklung</a></li>
                     <li><a href="#">Statistiken</a></li>
                     <li><a href="#">Siegerliste</a></li>
                 </ul>
-            </nav>
+            </nav> -->
         </div>
     </header>
     <div class="ranking-container">
-        <h2>Gesamtplatzierung</h2>
-        <table class="ranking-table" id="total-ranking">
-            <thead>
-                <tr>
-                    <th>Platz</th>
-                    <th>Spieler</th>
-                    <th>Spiele</th>
-                    <th>Minuten</th>
-                    <th>Punkte/90min</th>
-                    <th>Punkte</th>
-                </tr>
-            </thead>
-            <tbody id="ranking-body"></tbody>
-        </table>
+        <div class="tab-group">
+            <button class="tab-button active" data-tab="gesamt">Gesamtplatzierung</button>
+            <button class="tab-button" data-tab="community">Community</button>
+            <button class="tab-button" data-tab="riky">Riky</button>
+            <button class="tab-button" data-tab="sebastian">Sebastian</button>
+        </div>
+
+        <div class="tab-content active" id="gesamt">
+            <table class="ranking-table" id="total-ranking">
+                <thead>
+                    <tr>
+                        <th>Platz</th>
+                        <th>Spieler</th>
+                        <th>Spiele</th>
+                        <th>Minuten</th>
+                        <th>Punkte/90min</th>
+                        <th>Punkte</th>
+                    </tr>
+                </thead>
+                <tbody id="ranking-body"></tbody>
+            </table>
+        </div>
+
+        <div class="tab-content" id="community" style="display: none;">
+            <p>Hier werden die Daten der Community angezeigt.</p>
+        </div>
+
+        <div class="tab-content" id="riky" style="display: none;">
+            <p>Hier werden Rikys Daten angezeigt.</p>
+        </div>
+
+        <div class="tab-content" id="sebastian" style="display: none;">
+            <p>Hier werden Sebastians Daten angezeigt.</p>
+        </div>
     </div>
     <div class="chart">
         <canvas id="line-chart"></canvas>

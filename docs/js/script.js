@@ -45,4 +45,22 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         })
         .catch(error => console.error('Fehler beim Laden der Daten:', error));
+
+    // Tabs
+    document.querySelectorAll('.tab-button').forEach(button => {
+        button.addEventListener('click', () => {
+            console.log('hello, world');
+
+            // Entferne die 'active'-Klasse von allen Tabs und Inhalten
+            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.style.display = 'none');
+
+            // Füge die 'active'-Klasse zum geklickten Tab hinzu
+            button.classList.add('active');
+
+            // Zeige den passenden Tab-Inhalt an
+            const tabId = button.getAttribute('data-tab');
+            document.getElementById(tabId).style.display = 'block';
+        });
+    });
 });

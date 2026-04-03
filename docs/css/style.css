@@ -113,6 +113,45 @@ body {
     background-color: rgba(255, 255, 255, 0.05);
 }
 
+.tab-group {
+    display: flex;
+    background-color: #222;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 20px;
+    border-radius: 100vh;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 10px;
+    background: none;
+    border: none;
+    color: white;
+    border-radius: 100vh;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.tab-button:hover {
+    background-color: #444;
+}
+
+.tab-button.active {
+    background-color: var(--vfb_red);
+    color: var(--white);
+    border-radius: 100vh;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
 a {
     text-decoration: none;
     color: white;
