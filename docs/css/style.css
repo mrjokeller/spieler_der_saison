@@ -73,6 +73,11 @@ body {
     .shirt-number {
         display: none;
     }
+
+    h1 {
+        font-size: medium;
+        font-weight: 600;
+    }
 }
 
 /* position colors */
