@@ -13,12 +13,13 @@ def data_path(file):
     return script_dir + file_type + file
 
 
+
 query_total_ranking = """
     WITH player_minutes AS (
-        -- sum total minutes per player (regardless of player_points)
         SELECT
             player_id,
             SUM(minutes) AS total_minutes
+            COUNT(DISTINCT game_id) AS games_played
         FROM
             player_data
         GROUP BY
@@ -29,8 +30,8 @@ query_total_ranking = """
         p.name AS player_name,
         MAX(p.shirt_number) AS shirt_number,
         SUM(pp.points) AS total_points,
-        COUNT(DISTINCT pp.game_id) AS games_played,
-        pm.total_minutes,  -- minutes from aggregated table
+        pm.games_played,
+        pm.total_minutes,
         CASE
             WHEN pm.total_minutes >= 90
             THEN ROUND((SUM(pp.points) * 90.0 / NULLIF(pm.total_minutes, 0)), 2)
@@ -49,114 +50,24 @@ query_total_ranking = """
 """
 
 query_community_ranking = """
-    WITH player_minutes AS (
-        -- sum total minutes per player (regardless of player_points)
-        SELECT
-            player_id,
-            SUM(minutes) AS total_minutes
-        FROM
-            player_data
-        GROUP BY
-            player_id
-    )
-    SELECT
-        p.player_id AS player_id,
-        p.name AS player_name,
-        MAX(p.shirt_number) AS shirt_number,
-        SUM(pp.points) AS total_points,
-        COUNT(DISTINCT pp.game_id) AS games_played,
-        pm.total_minutes,  -- minutes from aggregated table
-        CASE
-            WHEN pm.total_minutes >= 90
-            THEN ROUND((SUM(pp.points) * 90.0 / NULLIF(pm.total_minutes, 0)), 2)
-            ELSE NULL
-        END AS points_per_90_minutes
-    FROM
-        player_points pp
-    JOIN
-        player p ON pp.player_id = p.player_id
-    LEFT JOIN
-        player_minutes pm ON pp.player_id = pm.player_id
-    WHERE
-        pp.source = "Community"
-    GROUP BY
-        p.player_id, p.name
-    ORDER BY
-        total_points DESC;
+    SELECT *
+    FROM player_ranking_view
+    WHERE source = "Community"
+    ORDER BY total_points DESC;
 """
 
 query_riky_ranking = """
-    WITH player_minutes AS (
-        -- sum total minutes per player (regardless of player_points)
-        SELECT
-            player_id,
-            SUM(minutes) AS total_minutes
-        FROM
-            player_data
-        GROUP BY
-            player_id
-    )
-    SELECT
-        p.player_id AS player_id,
-        p.name AS player_name,
-        MAX(p.shirt_number) AS shirt_number,
-        SUM(pp.points) AS total_points,
-        COUNT(DISTINCT pp.game_id) AS games_played,
-        pm.total_minutes,  -- minutes from aggregated table
-        CASE
-            WHEN pm.total_minutes >= 90
-            THEN ROUND((SUM(pp.points) * 90.0 / NULLIF(pm.total_minutes, 0)), 2)
-            ELSE NULL
-        END AS points_per_90_minutes
-    FROM
-        player_points pp
-    JOIN
-        player p ON pp.player_id = p.player_id
-    LEFT JOIN
-        player_minutes pm ON pp.player_id = pm.player_id
-    WHERE
-        pp.source = "Riky Palm"
-    GROUP BY
-        p.player_id, p.name
-    ORDER BY
-        total_points DESC;
+    SELECT *
+    FROM player_ranking_view
+    WHERE source = "Riky Palm"
+    ORDER BY total_points DESC;
 """
 
 query_sebastian_ranking = """
-    WITH player_minutes AS (
-        -- sum total minutes per player (regardless of player_points)
-        SELECT
-            player_id,
-            SUM(minutes) AS total_minutes
-        FROM
-            player_data
-        GROUP BY
-            player_id
-    )
-    SELECT
-        p.player_id AS player_id,
-        p.name AS player_name,
-        MAX(p.shirt_number) AS shirt_number,
-        SUM(pp.points) AS total_points,
-        COUNT(DISTINCT pp.game_id) AS games_played,
-        pm.total_minutes,  -- minutes from aggregated table
-        CASE
-            WHEN pm.total_minutes >= 90
-            THEN ROUND((SUM(pp.points) * 90.0 / NULLIF(pm.total_minutes, 0)), 2)
-            ELSE NULL
-        END AS points_per_90_minutes
-    FROM
-        player_points pp
-    JOIN
-        player p ON pp.player_id = p.player_id
-    LEFT JOIN
-        player_minutes pm ON pp.player_id = pm.player_id
-    WHERE
-        pp.source = "Sebastian Rose"
-    GROUP BY
-        p.player_id, p.name
-    ORDER BY
-        total_points DESC;
+    SELECT *
+    FROM player_ranking_view
+    WHERE source = "Sebastian Rose"
+    ORDER BY total_points DESC;
 """
 
 query_line_chart = """

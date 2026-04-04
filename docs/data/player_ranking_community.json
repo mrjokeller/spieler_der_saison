@@ -6,7 +6,8 @@
         "total_points": 32,
         "games_played": 38,
         "total_minutes": 2921,
-        "points_per_90_minutes": 0.99
+        "points_per_90_minutes": 0.99,
+        "source": "Community"
     },
     {
         "player_id": 18,
@@ -15,7 +16,8 @@
         "total_points": 28,
         "games_played": 43,
         "total_minutes": 1954,
-        "points_per_90_minutes": 1.29
+        "points_per_90_minutes": 1.29,
+        "source": "Community"
     },
     {
         "player_id": 7,
@@ -24,7 +26,8 @@
         "total_points": 24,
         "games_played": 41,
         "total_minutes": 2641,
-        "points_per_90_minutes": 0.82
+        "points_per_90_minutes": 0.82,
+        "source": "Community"
     },
     {
         "player_id": 17,
@@ -33,7 +36,8 @@
         "total_points": 22,
         "games_played": 33,
         "total_minutes": 2213,
-        "points_per_90_minutes": 0.89
+        "points_per_90_minutes": 0.89,
+        "source": "Community"
     },
     {
         "player_id": 27,
@@ -42,7 +46,8 @@
         "total_points": 21,
         "games_played": 29,
         "total_minutes": 1861,
-        "points_per_90_minutes": 1.02
+        "points_per_90_minutes": 1.02,
+        "source": "Community"
     },
     {
         "player_id": 29,
@@ -51,7 +56,8 @@
         "total_points": 18,
         "games_played": 41,
         "total_minutes": 2795,
-        "points_per_90_minutes": 0.58
+        "points_per_90_minutes": 0.58,
+        "source": "Community"
     },
     {
         "player_id": 3,
@@ -60,7 +66,8 @@
         "total_points": 16,
         "games_played": 40,
         "total_minutes": 3630,
-        "points_per_90_minutes": 0.4
+        "points_per_90_minutes": 0.4,
+        "source": "Community"
     },
     {
         "player_id": 10,
@@ -69,7 +76,8 @@
         "total_points": 16,
         "games_played": 41,
         "total_minutes": 3013,
-        "points_per_90_minutes": 0.48
+        "points_per_90_minutes": 0.48,
+        "source": "Community"
     },
     {
         "player_id": 6,
@@ -78,7 +86,8 @@
         "total_points": 11,
         "games_played": 33,
         "total_minutes": 2808,
-        "points_per_90_minutes": 0.35
+        "points_per_90_minutes": 0.35,
+        "source": "Community"
     },
     {
         "player_id": 15,
@@ -87,7 +96,8 @@
         "total_points": 11,
         "games_played": 32,
         "total_minutes": 1484,
-        "points_per_90_minutes": 0.67
+        "points_per_90_minutes": 0.67,
+        "source": "Community"
     },
     {
         "player_id": 22,
@@ -96,16 +106,18 @@
         "total_points": 10,
         "games_played": 31,
         "total_minutes": 1185,
-        "points_per_90_minutes": 0.76
+        "points_per_90_minutes": 0.76,
+        "source": "Community"
     },
     {
         "player_id": 9,
         "player_name": "Finn Jeltsch",
         "shirt_number": 29,
         "total_points": 9,
-        "games_played": 32,
+        "games_played": 33,
         "total_minutes": 2303,
-        "points_per_90_minutes": 0.35
+        "points_per_90_minutes": 0.35,
+        "source": "Community"
     },
     {
         "player_id": 24,
@@ -114,7 +126,8 @@
         "total_points": 8,
         "games_played": 43,
         "total_minutes": 3426,
-        "points_per_90_minutes": 0.21
+        "points_per_90_minutes": 0.21,
+        "source": "Community"
     },
     {
         "player_id": 30,
@@ -123,7 +136,8 @@
         "total_points": 8,
         "games_played": 30,
         "total_minutes": 1372,
-        "points_per_90_minutes": 0.52
+        "points_per_90_minutes": 0.52,
+        "source": "Community"
     },
     {
         "player_id": 20,
@@ -132,7 +146,8 @@
         "total_points": 7,
         "games_played": 40,
         "total_minutes": 2823,
-        "points_per_90_minutes": 0.22
+        "points_per_90_minutes": 0.22,
+        "source": "Community"
     },
     {
         "player_id": 14,
@@ -141,7 +156,8 @@
         "total_points": 5,
         "games_played": 4,
         "total_minutes": 180,
-        "points_per_90_minutes": 2.5
+        "points_per_90_minutes": 2.5,
+        "source": "Community"
     },
     {
         "player_id": 5,
@@ -150,7 +166,8 @@
         "total_points": 4,
         "games_played": 32,
         "total_minutes": 1887,
-        "points_per_90_minutes": 0.19
+        "points_per_90_minutes": 0.19,
+        "source": "Community"
     },
     {
         "player_id": 8,
@@ -159,7 +176,8 @@
         "total_points": 4,
         "games_played": 19,
         "total_minutes": 1282,
-        "points_per_90_minutes": 0.28
+        "points_per_90_minutes": 0.28,
+        "source": "Community"
     },
     {
         "player_id": 1,
@@ -168,7 +186,8 @@
         "total_points": 3,
         "games_played": 4,
         "total_minutes": 360,
-        "points_per_90_minutes": 0.75
+        "points_per_90_minutes": 0.75,
+        "source": "Community"
     },
     {
         "player_id": 26,
@@ -177,7 +196,8 @@
         "total_points": 3,
         "games_played": 25,
         "total_minutes": 970,
-        "points_per_90_minutes": 0.28
+        "points_per_90_minutes": 0.28,
+        "source": "Community"
     },
     {
         "player_id": 13,
@@ -186,7 +206,8 @@
         "total_points": 2,
         "games_played": 34,
         "total_minutes": 1883,
-        "points_per_90_minutes": 0.1
+        "points_per_90_minutes": 0.1,
+        "source": "Community"
     },
     {
         "player_id": 19,
@@ -195,7 +216,8 @@
         "total_points": 1,
         "games_played": 6,
         "total_minutes": 124,
-        "points_per_90_minutes": 0.73
+        "points_per_90_minutes": 0.73,
+        "source": "Community"
     },
     {
         "player_id": 25,
@@ -204,7 +226,8 @@
         "total_points": 1,
         "games_played": 1,
         "total_minutes": 9,
-        "points_per_90_minutes": null
+        "points_per_90_minutes": null,
+        "source": "Community"
     },
     {
         "player_id": 4,
@@ -213,7 +236,8 @@
         "total_points": 0,
         "games_played": 8,
         "total_minutes": 375,
-        "points_per_90_minutes": 0.0
+        "points_per_90_minutes": 0.0,
+        "source": "Community"
     },
     {
         "player_id": 11,
@@ -222,7 +246,8 @@
         "total_points": 0,
         "games_played": 2,
         "total_minutes": 107,
-        "points_per_90_minutes": 0.0
+        "points_per_90_minutes": 0.0,
+        "source": "Community"
     },
     {
         "player_id": 12,
@@ -231,7 +256,8 @@
         "total_points": 0,
         "games_played": 2,
         "total_minutes": 1,
-        "points_per_90_minutes": null
+        "points_per_90_minutes": null,
+        "source": "Community"
     },
     {
         "player_id": 32,
@@ -240,7 +266,8 @@
         "total_points": 0,
         "games_played": 3,
         "total_minutes": 229,
-        "points_per_90_minutes": 0.0
+        "points_per_90_minutes": 0.0,
+        "source": "Community"
     },
     {
         "player_id": 33,
@@ -249,6 +276,7 @@
         "total_points": 0,
         "games_played": 6,
         "total_minutes": 29,
-        "points_per_90_minutes": null
+        "points_per_90_minutes": null,
+        "source": "Community"
     }
 ]
