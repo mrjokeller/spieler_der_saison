@@ -162,11 +162,16 @@ a {
     color: white;
 }
 
+#home {
+    font-size: small;
+}
+
 .sticky-header {
     position: sticky;
     top: 0;
     width: 100%;
-    background-color: var(--dark-gray);
+    background-color: rgba(30, 30, 30, 0.4);
+    backdrop-filter: blur(5px);
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -175,7 +180,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 8px 16px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -194,7 +199,7 @@ a {
 .navbar a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: normal;
     transition: color 0.3s;
 }
 
@@ -204,4 +209,10 @@ a {
 
 .chart {
     margin: 32px;
+}
+
+footer {
+    text-align: center;
+    margin: 32px;
+    font-size: small;
 }
