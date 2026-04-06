@@ -96,11 +96,17 @@ body {
     border-left: 4px solid #cd7f32;
 }
 
-/* points colored green */
+/* points colored red */
 .ranking-table td:last-child {
     font-weight: bold;
     color: var(--vfb_red);
     text-align: right;
+}
+
+.ranking-table td:nth-last-child(2),
+.ranking-table td:nth-last-child(3),
+.ranking-table td:nth-last-child(4) {
+    text-align: center;
 }
 
 /* shirt numbers */
