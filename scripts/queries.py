@@ -1,24 +1,17 @@
-import sqlite3
-import json
-import os
-
-DB_PATH = "/../data/"
-JSON_PATH = "/../docs/data/"
-
-
-# this function creates the filepath for files in the data folder
-def data_path(file):
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    file_type = JSON_PATH if file.split(".")[1] == "json" else DB_PATH
-    return script_dir + file_type + file
-
+def query_ranking(source):
+    """Returns the query for the player ranking for the given source."""
+    return f"""
+            SELECT * FROM player_ranking_view
+            WHERE source = "{source}"
+            ORDER BY total_points DESC;
+        """
 
 
 query_total_ranking = """
     WITH player_minutes AS (
         SELECT
             player_id,
-            SUM(minutes) AS total_minutes
+            SUM(minutes) AS total_minutes,
             COUNT(DISTINCT game_id) AS games_played
         FROM
             player_data
@@ -47,27 +40,6 @@ query_total_ranking = """
         p.player_id, p.name
     ORDER BY
         total_points DESC;
-"""
-
-query_community_ranking = """
-    SELECT *
-    FROM player_ranking_view
-    WHERE source = "Community"
-    ORDER BY total_points DESC;
-"""
-
-query_riky_ranking = """
-    SELECT *
-    FROM player_ranking_view
-    WHERE source = "Riky Palm"
-    ORDER BY total_points DESC;
-"""
-
-query_sebastian_ranking = """
-    SELECT *
-    FROM player_ranking_view
-    WHERE source = "Sebastian Rose"
-    ORDER BY total_points DESC;
 """
 
 query_line_chart = """
@@ -141,72 +113,3 @@ query_line_chart = """
         tp.total_points DESC;
 
 """
-
-
-def export_ranking_to_json(db_name, output_file, query):
-    # set connection to sqlite database
-    conn = sqlite3.connect(db_name)
-    conn.row_factory = sqlite3.Row
-    c = conn.cursor()
-
-    # make query
-    c.execute(query)
-    ranking = c.fetchall()
-
-    # transform data into dictionaries
-    ranking_list = []
-    for row in ranking:
-        ranking_list.append(dict(row))
-
-    # save json
-    with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(ranking_list, f, indent=4, ensure_ascii=False)
-
-    conn.close()
-    print(f"Ranking was exported succesfully to {output_file}.")
-
-
-def export_to_chart(db_name, output_file, query):
-    # set connection to sqlite database
-    conn = sqlite3.connect(db_name)
-    conn.row_factory = sqlite3.Row
-    c = conn.cursor()
-
-    # make query
-    c.execute(query)
-    ranking = c.fetchall()
-
-    chart_data = []
-    for label, data_str in ranking:
-        data = [int(point) for point in data_str.split(", ")]
-        chart_data.append({"label": label, "data": data, "fill": False})
-
-    # save json
-    with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(chart_data, f, indent=4, ensure_ascii=False)
-
-    conn.close()
-    print(f"Ranking was exported succesfully to {output_file}.")
-
-
-output_files = [
-    "player_ranking.json",
-    "player_ranking_community.json",
-    "player_ranking_riky.json",
-    "player_ranking_sebastian.json",
-]
-queries = [
-    query_total_ranking,
-    query_community_ranking,
-    query_riky_ranking,
-    query_sebastian_ranking,
-]
-
-for i in range(4):
-    export_ranking_to_json(data_path("data.db"), data_path(output_files[i]), queries[i])
-
-export_to_chart(
-    db_name=data_path("data.db"),
-    output_file=data_path("line_chart_data.json"),
-    query=query_line_chart,
-)
