@@ -5,8 +5,11 @@ from queries import (
 )
 from db_utils import execute_query
 from export_utils import export_to_json, process_and_export
-from config import DEFAULT_DB_NAME, JSON_PATH
+from config import DEFAULT_DB_NAME, JSON_PATH, TEST_JSON_PATH
 from processors import prepare_chart_data
+
+is_test = True
+export_path = TEST_JSON_PATH if is_test else JSON_PATH
 
 EXPORT_TASKS = [
     {
@@ -49,14 +52,14 @@ def run_exports():
         if task["processor"] is None:
             # default process
             data = execute_query(DEFAULT_DB_NAME, task["query"])
-            export_to_json(data, JSON_PATH + task["output_file"])
+            export_to_json(data, export_path + task["output_file"])
         else:
             # export with processing
             process_and_export(
                 db_path=DEFAULT_DB_NAME,
                 query=task["query"],
                 processor=task["processor"],
-                output_path=JSON_PATH + task["output_file"],
+                output_path=export_path + task["output_file"],
             )
 
 
