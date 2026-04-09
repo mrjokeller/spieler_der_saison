@@ -4,35 +4,44 @@
         "player_name": "Deniz Undav",
         "shirt_number": 26,
         "total_points": 102,
-        "games_played": 38,
-        "total_minutes": 2921,
-        "points_per_90_minutes": 3.14
+        "games_played": 39,
+        "total_minutes": 3011,
+        "points_per_90_minutes": 3.05
     },
     {
         "player_id": 18,
         "player_name": "Chris Führich",
         "shirt_number": 10,
-        "total_points": 77,
-        "games_played": 43,
-        "total_minutes": 1954,
-        "points_per_90_minutes": 3.55
+        "total_points": 78,
+        "games_played": 44,
+        "total_minutes": 2023,
+        "points_per_90_minutes": 3.47
     },
     {
         "player_id": 3,
         "player_name": "Alexander Nübel",
         "shirt_number": 33,
-        "total_points": 63,
-        "games_played": 40,
-        "total_minutes": 3630,
-        "points_per_90_minutes": 1.56
+        "total_points": 64,
+        "games_played": 41,
+        "total_minutes": 3720,
+        "points_per_90_minutes": 1.55
+    },
+    {
+        "player_id": 7,
+        "player_name": "Ramon Hendriks",
+        "shirt_number": 3,
+        "total_points": 53,
+        "games_played": 42,
+        "total_minutes": 2731,
+        "points_per_90_minutes": 1.75
     },
     {
         "player_id": 27,
         "player_name": "Ermedin Demirovic",
         "shirt_number": 9,
         "total_points": 52,
-        "games_played": 29,
-        "total_minutes": 1861,
+        "games_played": 30,
+        "total_minutes": 1863,
         "points_per_90_minutes": 2.51
     },
     {
@@ -40,80 +49,71 @@
         "player_name": "Jamie Leweling",
         "shirt_number": 18,
         "total_points": 52,
-        "games_played": 41,
-        "total_minutes": 2795,
-        "points_per_90_minutes": 1.67
-    },
-    {
-        "player_id": 7,
-        "player_name": "Ramon Hendriks",
-        "shirt_number": 3,
-        "total_points": 49,
-        "games_played": 41,
-        "total_minutes": 2641,
-        "points_per_90_minutes": 1.67
+        "games_played": 42,
+        "total_minutes": 2816,
+        "points_per_90_minutes": 1.66
     },
     {
         "player_id": 17,
         "player_name": "Bilal El Khannouss",
         "shirt_number": 11,
         "total_points": 49,
-        "games_played": 33,
-        "total_minutes": 2213,
-        "points_per_90_minutes": 1.99
+        "games_played": 34,
+        "total_minutes": 2231,
+        "points_per_90_minutes": 1.98
     },
     {
         "player_id": 6,
         "player_name": "Jeff Chabot",
         "shirt_number": 24,
         "total_points": 48,
-        "games_played": 33,
-        "total_minutes": 2808,
-        "points_per_90_minutes": 1.54
+        "games_played": 34,
+        "total_minutes": 2898,
+        "points_per_90_minutes": 1.49
     },
     {
         "player_id": 10,
         "player_name": "Maximilian Mittelstädt",
         "shirt_number": 7,
         "total_points": 44,
-        "games_played": 41,
-        "total_minutes": 3013,
-        "points_per_90_minutes": 1.31
+        "games_played": 42,
+        "total_minutes": 3101,
+        "points_per_90_minutes": 1.28
     },
     {
         "player_id": 24,
         "player_name": "Angelo Stiller",
         "shirt_number": 6,
-        "total_points": 37,
-        "games_played": 43,
-        "total_minutes": 3426,
-        "points_per_90_minutes": 0.97
+        "total_points": 40,
+        "games_played": 44,
+        "total_minutes": 3514,
+        "points_per_90_minutes": 1.02
     },
     {
         "player_id": 9,
         "player_name": "Finn Jeltsch",
         "shirt_number": 29,
-        "total_points": 32,
-        "games_played": 32,
-        "total_minutes": 2303,
-        "points_per_90_minutes": 1.25
+        "total_points": 35,
+        "games_played": 34,
+        "total_minutes": 2393,
+        "points_per_90_minutes": 1.32
     },
     {
         "player_id": 22,
         "player_name": "Nikolas Nartey",
         "shirt_number": 28,
-        "total_points": 32,
-        "games_played": 31,
-        "total_minutes": 1185,
-        "points_per_90_minutes": 2.43
+        "total_points": 33,
+        "games_played": 32,
+        "total_minutes": 1257,
+        "points_per_90_minutes": 2.36
     },
     {
         "player_id": 15,
         "player_name": "Chema",
         "shirt_number": 30,
         "total_points": 30,
-        "games_played": 32,
-        "total_minutes": 1484,
+        "games_played": 33,
+        "total_minutes": 1486,
         "points_per_90_minutes": 1.82
     },
     {
@@ -121,18 +121,27 @@
         "player_name": "Tiago Tomas",
         "shirt_number": 8,
         "total_points": 25,
-        "games_played": 30,
-        "total_minutes": 1372,
-        "points_per_90_minutes": 1.64
+        "games_played": 31,
+        "total_minutes": 1390,
+        "points_per_90_minutes": 1.62
     },
     {
         "player_id": 20,
         "player_name": "Atakan Karazor",
         "shirt_number": 16,
         "total_points": 20,
-        "games_played": 40,
-        "total_minutes": 2823,
-        "points_per_90_minutes": 0.64
+        "games_played": 41,
+        "total_minutes": 2913,
+        "points_per_90_minutes": 0.62
+    },
+    {
+        "player_id": 5,
+        "player_name": "Lorenz Assignon",
+        "shirt_number": 22,
+        "total_points": 19,
+        "games_played": 33,
+        "total_minutes": 1959,
+        "points_per_90_minutes": 0.87
     },
     {
         "player_id": 8,
@@ -142,15 +151,6 @@
         "games_played": 19,
         "total_minutes": 1282,
         "points_per_90_minutes": 1.19
-    },
-    {
-        "player_id": 5,
-        "player_name": "Lorenz Assignon",
-        "shirt_number": 22,
-        "total_points": 14,
-        "games_played": 32,
-        "total_minutes": 1887,
-        "points_per_90_minutes": 0.67
     },
     {
         "player_id": 14,

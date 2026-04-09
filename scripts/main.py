@@ -8,7 +8,7 @@ from export_utils import export_to_json, process_and_export
 from config import DEFAULT_DB_NAME, JSON_PATH, TEST_JSON_PATH
 from processors import prepare_chart_data
 
-is_test = True
+is_test = False
 export_path = TEST_JSON_PATH if is_test else JSON_PATH
 
 EXPORT_TASKS = [
@@ -40,7 +40,7 @@ EXPORT_TASKS = [
         "query": query_line_chart,
         "output_file": "line_chart_data.json",
         "processor": prepare_chart_data,
-        "active": True,
+        "active": False,
     },
 ]
 

@@ -4,19 +4,19 @@
         "player_name": "Deniz Undav",
         "shirt_number": 26,
         "total_points": 37,
-        "games_played": 38,
-        "total_minutes": 2921,
-        "points_per_90_minutes": 1.14,
+        "games_played": 39,
+        "total_minutes": 3011,
+        "points_per_90_minutes": 1.11,
         "source": "Riky Palm"
     },
     {
         "player_id": 18,
         "player_name": "Chris Führich",
         "shirt_number": 10,
-        "total_points": 23,
-        "games_played": 43,
-        "total_minutes": 1954,
-        "points_per_90_minutes": 1.06,
+        "total_points": 24,
+        "games_played": 44,
+        "total_minutes": 2023,
+        "points_per_90_minutes": 1.07,
         "source": "Riky Palm"
     },
     {
@@ -24,9 +24,19 @@
         "player_name": "Jamie Leweling",
         "shirt_number": 18,
         "total_points": 18,
-        "games_played": 41,
-        "total_minutes": 2795,
+        "games_played": 42,
+        "total_minutes": 2816,
         "points_per_90_minutes": 0.58,
+        "source": "Riky Palm"
+    },
+    {
+        "player_id": 24,
+        "player_name": "Angelo Stiller",
+        "shirt_number": 6,
+        "total_points": 17,
+        "games_played": 44,
+        "total_minutes": 3514,
+        "points_per_90_minutes": 0.44,
         "source": "Riky Palm"
     },
     {
@@ -34,9 +44,9 @@
         "player_name": "Alexander Nübel",
         "shirt_number": 33,
         "total_points": 16,
-        "games_played": 40,
-        "total_minutes": 3630,
-        "points_per_90_minutes": 0.4,
+        "games_played": 41,
+        "total_minutes": 3720,
+        "points_per_90_minutes": 0.39,
         "source": "Riky Palm"
     },
     {
@@ -44,9 +54,19 @@
         "player_name": "Jeff Chabot",
         "shirt_number": 24,
         "total_points": 16,
-        "games_played": 33,
-        "total_minutes": 2808,
-        "points_per_90_minutes": 0.51,
+        "games_played": 34,
+        "total_minutes": 2898,
+        "points_per_90_minutes": 0.5,
+        "source": "Riky Palm"
+    },
+    {
+        "player_id": 9,
+        "player_name": "Finn Jeltsch",
+        "shirt_number": 29,
+        "total_points": 16,
+        "games_played": 34,
+        "total_minutes": 2393,
+        "points_per_90_minutes": 0.6,
         "source": "Riky Palm"
     },
     {
@@ -54,39 +74,19 @@
         "player_name": "Ramon Hendriks",
         "shirt_number": 3,
         "total_points": 15,
-        "games_played": 41,
-        "total_minutes": 2641,
-        "points_per_90_minutes": 0.51,
-        "source": "Riky Palm"
-    },
-    {
-        "player_id": 9,
-        "player_name": "Finn Jeltsch",
-        "shirt_number": 29,
-        "total_points": 15,
-        "games_played": 33,
-        "total_minutes": 2303,
-        "points_per_90_minutes": 0.59,
-        "source": "Riky Palm"
-    },
-    {
-        "player_id": 24,
-        "player_name": "Angelo Stiller",
-        "shirt_number": 6,
-        "total_points": 15,
-        "games_played": 43,
-        "total_minutes": 3426,
-        "points_per_90_minutes": 0.39,
+        "games_played": 42,
+        "total_minutes": 2731,
+        "points_per_90_minutes": 0.49,
         "source": "Riky Palm"
     },
     {
         "player_id": 22,
         "player_name": "Nikolas Nartey",
         "shirt_number": 28,
-        "total_points": 14,
-        "games_played": 31,
-        "total_minutes": 1185,
-        "points_per_90_minutes": 1.06,
+        "total_points": 15,
+        "games_played": 32,
+        "total_minutes": 1257,
+        "points_per_90_minutes": 1.07,
         "source": "Riky Palm"
     },
     {
@@ -94,8 +94,8 @@
         "player_name": "Ermedin Demirovic",
         "shirt_number": 9,
         "total_points": 14,
-        "games_played": 29,
-        "total_minutes": 1861,
+        "games_played": 30,
+        "total_minutes": 1863,
         "points_per_90_minutes": 0.68,
         "source": "Riky Palm"
     },
@@ -104,9 +104,9 @@
         "player_name": "Bilal El Khannouss",
         "shirt_number": 11,
         "total_points": 13,
-        "games_played": 33,
-        "total_minutes": 2213,
-        "points_per_90_minutes": 0.53,
+        "games_played": 34,
+        "total_minutes": 2231,
+        "points_per_90_minutes": 0.52,
         "source": "Riky Palm"
     },
     {
@@ -124,9 +124,9 @@
         "player_name": "Maximilian Mittelstädt",
         "shirt_number": 7,
         "total_points": 9,
-        "games_played": 41,
-        "total_minutes": 3013,
-        "points_per_90_minutes": 0.27,
+        "games_played": 42,
+        "total_minutes": 3101,
+        "points_per_90_minutes": 0.26,
         "source": "Riky Palm"
     },
     {
@@ -134,9 +134,19 @@
         "player_name": "Chema",
         "shirt_number": 30,
         "total_points": 9,
-        "games_played": 32,
-        "total_minutes": 1484,
+        "games_played": 33,
+        "total_minutes": 1486,
         "points_per_90_minutes": 0.55,
+        "source": "Riky Palm"
+    },
+    {
+        "player_id": 5,
+        "player_name": "Lorenz Assignon",
+        "shirt_number": 22,
+        "total_points": 8,
+        "games_played": 33,
+        "total_minutes": 1959,
+        "points_per_90_minutes": 0.37,
         "source": "Riky Palm"
     },
     {
@@ -144,19 +154,9 @@
         "player_name": "Tiago Tomas",
         "shirt_number": 8,
         "total_points": 8,
-        "games_played": 30,
-        "total_minutes": 1372,
+        "games_played": 31,
+        "total_minutes": 1390,
         "points_per_90_minutes": 0.52,
-        "source": "Riky Palm"
-    },
-    {
-        "player_id": 5,
-        "player_name": "Lorenz Assignon",
-        "shirt_number": 22,
-        "total_points": 7,
-        "games_played": 32,
-        "total_minutes": 1887,
-        "points_per_90_minutes": 0.33,
         "source": "Riky Palm"
     },
     {
@@ -164,8 +164,8 @@
         "player_name": "Atakan Karazor",
         "shirt_number": 16,
         "total_points": 7,
-        "games_played": 40,
-        "total_minutes": 2823,
+        "games_played": 41,
+        "total_minutes": 2913,
         "points_per_90_minutes": 0.22,
         "source": "Riky Palm"
     },
