@@ -47,7 +47,9 @@ EXPORT_TASKS = [
 
 def run_exports():
     for task in EXPORT_TASKS:
+        print(f"trying to run task for {task['output_file']}.")
         if task["active"] is False:
+            print(f"skipping task for {task['output_file']}.")
             continue
         if task["processor"] is None:
             # default process

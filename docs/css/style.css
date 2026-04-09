@@ -124,6 +124,25 @@ body {
     background-color: rgba(255, 255, 255, 0.05);
 }
 
+/* "Show More"-Button */
+.expand-button {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 24px;
+    background-color: var(--dark-gray);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+}
+
+.expand-button:hover {
+    background-color: var(--vfb_red);
+    transition: 0.25s ease-in-out;
+}
+
 .tab-group {
     display: flex;
     background-color: #222;

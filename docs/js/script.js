@@ -29,23 +29,34 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// load data and populate table
+// Load data and populate table with expand functionality
 function loadRankingData(tabId, jsonFile) {
     fetch(`data/${jsonFile}`)
-        .then(response => response.json())
-        .then(data => {
-            const tableBody = document.getElementById(`ranking-body-${tabId}`);
-            tableBody.innerHTML = '';
+    .then(response => response.json())
+    .then(data => {
+        const tableBody = document.getElementById(`ranking-body-${tabId}`);
+        const expandButton = document.getElementById(`expand-button-${tabId}`);
+        tableBody.innerHTML = '';
 
-            data.forEach((player, index) => {
+        // Show only first 10 players initially
+        const initialRows = Math.min(10, data.length);
+        let isExpanded = false;
+
+        function renderTable(limit = initialRows) {
+            tableBody.innerHTML = '';
+            const rowsToShow = limit === 'all' ? data.length : limit;
+
+            for (let i = 0; i < rowsToShow; i++) {
                 const row = document.createElement('tr');
-                if (index < 3) {
-                    row.classList.add(`rank-${index + 1}`);
+                const player = data[i];
+
+                if (i < 3) {
+                    row.classList.add(`rank-${i + 1}`);
                 }
 
                 // Platz
                 const rankCell = document.createElement('td');
-                rankCell.textContent = (index + 1).toString();
+                rankCell.textContent = (i + 1).toString();
                 row.appendChild(rankCell);
 
                 // Spieler
@@ -74,7 +85,30 @@ function loadRankingData(tabId, jsonFile) {
                 row.appendChild(pointsCell);
 
                 tableBody.appendChild(row);
-            });
-        })
-        .catch(error => console.error(`Fehler beim Laden der Daten für ${tabId}:`, error));
+            }
+
+            // Button text anpassen
+            if (rowsToShow === data.length) {
+                expandButton.textContent = 'Show Less ▲';
+            } else if (data.length <= 10) {
+                expandButton.display = 'none';
+            } else {
+                expandButton.textContent = 'Show More ▼';
+            }
+        }
+
+        // Initial nur 10 Zeilen anzeigen
+        renderTable(initialRows);
+
+        // Button-Klick-Event
+        expandButton.onclick = function() {
+            isExpanded = !isExpanded;
+            if (isExpanded) {
+                renderTable('all');
+            } else {
+                renderTable(initialRows);
+            }
+        };
+    })
+    .catch(error => console.error(`Fehler beim Laden der Daten für ${tabId}:`, error));
 }
