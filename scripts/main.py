@@ -2,6 +2,7 @@ from queries import (
     query_total_ranking,
     query_ranking,
     query_line_chart,
+    query_most_points,
 )
 from db_utils import execute_query
 from export_utils import export_to_json, process_and_export
@@ -41,6 +42,12 @@ EXPORT_TASKS = [
         "output_file": "line_chart_data.json",
         "processor": prepare_chart_data,
         "active": False,
+    },
+    {
+        "query": query_most_points,
+        "output_file": "most_points_in_game.json",
+        "processor": None,
+        "active": True,
     },
 ]
 

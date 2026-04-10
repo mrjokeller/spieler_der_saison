@@ -113,3 +113,66 @@ query_line_chart = """
         tp.total_points DESC;
 
 """
+
+
+query_most_points = """ 
+    WITH points_per_game AS (
+        SELECT
+            g.game_id,
+            pp.player_id,
+            p.name,
+            SUM(pp.points) AS game_points,
+            g.opponent,
+            g.side,
+            g.result,
+            g.competition,
+            g.date
+        FROM
+            player_points pp
+        JOIN
+            player p ON pp.player_id = p.player_id
+        JOIN
+            games g ON pp.game_id = g.game_id
+        GROUP BY
+            g.game_id, pp.player_id, p.name, g.opponent, g.side, g.result, g.competition, g.date
+        HAVING
+            SUM(pp.points) > 0
+    ),
+    total_points AS (
+        SELECT
+            player_id,
+            SUM(points) AS total
+        FROM
+            player_points
+        GROUP BY
+            player_id
+    ),
+    max_points_per_player AS (
+        SELECT
+            player_id,
+            MAX(game_points) AS max_points_in_game
+        FROM
+            points_per_game
+        GROUP BY
+            player_id
+    )
+    SELECT
+        ppg.player_id,
+        ppg.name,
+        ppg.opponent,
+        ppg.side,
+        ppg.result,
+        ppg.competition,
+        ppg.date,
+        ppg.game_points AS max_points_in_game,
+        tp.total AS total_points
+    FROM
+        points_per_game ppg
+    JOIN
+        total_points tp ON ppg.player_id = tp.player_id
+    JOIN
+        max_points_per_player mpp ON ppg.player_id = mpp.player_id AND ppg.game_points = mpp.max_points_in_game
+    ORDER BY
+        ppg.game_points DESC,
+        tp.total DESC; 
+"""
