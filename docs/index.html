@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
@@ -7,8 +7,11 @@
     <title>VfBSTR - Spieler der Saison</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
-    <script src="js/chart.js"></script>
+    <!-- <script src="js/chart.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <link rel="stylesheet" href="//cdn.datatables.net/2.3.7/css/dataTables.dataTables.min.css">
+    <script src="//cdn.datatables.net/2.3.7/js/dataTables.min.js"></script>
 </head>
 
 <body>
@@ -35,7 +38,6 @@
             <button class="tab-button" data-tab="riky">Riky</button>
             <button class="tab-button" data-tab="sebastian">Sebastian</button>
         </div>
-
         <div class="tab-content active" id="total">
             <table class="ranking-table" id="total-ranking">
                 <thead>
@@ -50,7 +52,6 @@
                 </thead>
                 <tbody id="ranking-body-total"></tbody>
             </table>
-            <button id="expand-button-total" class="expand-button">Show More ▼</button>
         </div>
 
         <div class="tab-content" id="community" style="display: none;">
@@ -67,7 +68,6 @@
                 </thead>
                 <tbody id="ranking-body-community"></tbody>
             </table>
-            <button id="expand-button-community" class="expand-button">Show More ▼</button>
         </div>
 
         <div class="tab-content" id="riky" style="display: none;">
@@ -84,7 +84,6 @@
                 </thead>
                 <tbody id="ranking-body-riky"></tbody>
             </table>
-            <button id="expand-button-riky" class="expand-button">Show More ▼</button>
         </div>
 
         <div class="tab-content" id="sebastian" style="display: none;">
@@ -101,12 +100,8 @@
                 </thead>
                 <tbody id="ranking-body-sebastian"></tbody>
             </table>
-            <button id="expand-button-sebastian" class="expand-button">Show More ▼</button>
         </div>
     </div>
-    <!-- <div class="chart">
-        <canvas id="line-chart"></canvas>
-    </div> -->
     <footer>
         &copy; 2026 | Jonathan Keller
     </footer>

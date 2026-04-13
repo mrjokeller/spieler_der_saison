@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Standardmäßig die Gesamtplatzierung laden
     loadRankingData('total', 'player_ranking.json');
 
     // register tab-button-listener
@@ -31,84 +30,66 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Load data and populate table with expand functionality
 function loadRankingData(tabId, jsonFile) {
-    fetch(`data/${jsonFile}`)
-    .then(response => response.json())
-    .then(data => {
-        const tableBody = document.getElementById(`ranking-body-${tabId}`);
-        const expandButton = document.getElementById(`expand-button-${tabId}`);
-        tableBody.innerHTML = '';
-
-        // Show only first 10 players initially
-        const initialRows = Math.min(10, data.length);
-        let isExpanded = false;
-
-        function renderTable(limit = initialRows) {
-            tableBody.innerHTML = '';
-            const rowsToShow = limit === 'all' ? data.length : limit;
-
-            for (let i = 0; i < rowsToShow; i++) {
-                const row = document.createElement('tr');
-                const player = data[i];
-
-                if (i < 3) {
-                    row.classList.add(`rank-${i + 1}`);
+    if ($.fn.DataTable.isDataTable(`#${tabId}-ranking`)) {
+        return -1;
+    }
+    let table = new DataTable(`#${tabId}-ranking`, {
+        paging: false,
+        scrollY: 400,
+        searching: false,
+        ordering: true,
+        responsive: true,
+        autoWidth: true,
+        data: [],
+        columns: [
+            {
+                data: null, title: 'Rang', className: 'rank-cell', orderable: false, responsivePriority: 2, render: function (data, type, row, meta) {
+                    return meta.row + 1;
                 }
-
-                // Platz
-                const rankCell = document.createElement('td');
-                rankCell.textContent = (i + 1).toString();
-                row.appendChild(rankCell);
-
-                // Spieler
-                const playerCell = document.createElement('td');
-                playerCell.innerHTML = `<span class="shirt-number">${player.shirt_number}</span> ${player.player_name}`;
-                row.appendChild(playerCell);
-
-                // Spiele
-                const gamesCell = document.createElement('td');
-                gamesCell.textContent = player.games_played;
-                row.appendChild(gamesCell);
-
-                // Minuten
-                const minutesCell = document.createElement('td');
-                minutesCell.textContent = player.total_minutes;
-                row.appendChild(minutesCell);
-
-                // Punkte pro 90 Minuten
-                const pointsPer90Cell = document.createElement('td');
-                pointsPer90Cell.textContent = player.points_per_90_minutes ? player.points_per_90_minutes.toFixed(2) : 'n/a';
-                row.appendChild(pointsPer90Cell);
-
-                // Punkte
-                const pointsCell = document.createElement('td');
-                pointsCell.textContent = player.total_points;
-                row.appendChild(pointsCell);
-
-                tableBody.appendChild(row);
-            }
-
-            // Button text anpassen
-            if (rowsToShow === data.length) {
-                expandButton.textContent = 'Show Less ▲';
-            } else if (data.length <= 10) {
-                expandButton.display = 'none';
-            } else {
-                expandButton.textContent = 'Show More ▼';
+            },
+            {
+                data: null,
+                title: 'Spieler',
+                className: 'player-cell',
+                width: '50%',
+                orderable: false,
+                responsivePriority: 3,
+                render: function (data, type, row) {
+                    if (type === 'display') {
+                        return `<span class="shirt-number">${row.shirt_number}</span> ${row.player_name}`;
+                    }
+                    return `${row.shirt_number} ${row.player_name}`;
+                }
+            },
+            { data: 'games_played', title: 'Spiele', className: 'games-cell' },
+            { data: 'total_minutes', title: 'Minuten', className: 'minutes-cell' },
+            {
+                data: 'points_per_90_minutes', title: 'Punkte/90 Min', className: 'points-per-90-cell',
+                render: function (data, type, row) {
+                    return data !== null ? data !== 0 ? data.toFixed(2) : 0 : 0;
+                }
+            },
+            { data: 'total_points', title: 'Punkte', className: 'points-cell', responsivePriority: 1 }
+        ],
+        rowCallback: function (row, data) {
+            if (data.rank <= 3) {
+                row.classList.add(`rank-${data.rank}`);
             }
         }
+    });
 
-        // Initial nur 10 Zeilen anzeigen
-        renderTable(initialRows);
+    fetch(`data/${jsonFile}`)
+        .then(response => response.json())
+        .then(data => {
+            data.forEach((player, index) => {
+                player.rank = index + 1;
+            });
 
-        // Button-Klick-Event
-        expandButton.onclick = function() {
-            isExpanded = !isExpanded;
-            if (isExpanded) {
-                renderTable('all');
-            } else {
-                renderTable(initialRows);
-            }
-        };
-    })
-    .catch(error => console.error(`Fehler beim Laden der Daten für ${tabId}:`, error));
+            table.clear();
+            table.rows.add(data).draw();
+        })
+        .catch(error => {
+            console.error(`Fehler beim Laden der Daten für ${tabId}:`, error);
+            table.clear().draw();
+        });
 }

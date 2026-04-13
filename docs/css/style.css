@@ -39,7 +39,6 @@ body {
 }
 
 .ranking-table th {
-    text-align: left;
     padding: 12px 16px;
     color: var(--light-gray);
     background-color: var(--medium-gray);
@@ -100,19 +99,11 @@ body {
 .ranking-table td:last-child {
     font-weight: bold;
     color: var(--vfb_red);
-    text-align: right;
-}
-
-.ranking-table td:nth-last-child(2),
-.ranking-table td:nth-last-child(3),
-.ranking-table td:nth-last-child(4) {
-    text-align: center;
 }
 
 /* shirt numbers */
 .shirt-number {
     display: inline-block;
-    text-align: right;
     width: 16px;
     color: var(--light-gray);
     border-radius: 8px;
