@@ -32,83 +32,83 @@ document.addEventListener('DOMContentLoaded', function () {
 // Load data and populate table with expand functionality
 function loadRankingData(tabId, jsonFile) {
     fetch(`data/${jsonFile}`)
-    .then(response => response.json())
-    .then(data => {
-        const tableBody = document.getElementById(`ranking-body-${tabId}`);
-        const expandButton = document.getElementById(`expand-button-${tabId}`);
-        tableBody.innerHTML = '';
-
-        // Show only first 10 players initially
-        const initialRows = Math.min(10, data.length);
-        let isExpanded = false;
-
-        function renderTable(limit = initialRows) {
+        .then(response => response.json())
+        .then(data => {
+            const tableBody = document.getElementById(`ranking-body-${tabId}`);
+            const expandButton = document.getElementById(`expand-button-${tabId}`);
             tableBody.innerHTML = '';
-            const rowsToShow = limit === 'all' ? data.length : limit;
 
-            for (let i = 0; i < rowsToShow; i++) {
-                const row = document.createElement('tr');
-                const player = data[i];
+            // Show only first 10 players initially
+            const initialRows = Math.min(10, data.length);
+            let isExpanded = false;
 
-                if (i < 3) {
-                    row.classList.add(`rank-${i + 1}`);
+            function renderTable(limit = initialRows) {
+                tableBody.innerHTML = '';
+                const rowsToShow = limit === 'all' ? data.length : limit;
+
+                for (let i = 0; i < rowsToShow; i++) {
+                    const row = document.createElement('tr');
+                    const player = data[i];
+
+                    if (i < 3) {
+                        row.classList.add(`rank-${i + 1}`);
+                    }
+
+                    // Platz
+                    const rankCell = document.createElement('td');
+                    rankCell.textContent = (i + 1).toString();
+                    row.appendChild(rankCell);
+
+                    // Spieler
+                    const playerCell = document.createElement('td');
+                    playerCell.innerHTML = `<span class="shirt-number">${player.shirt_number}</span> ${player.player_name}`;
+                    row.appendChild(playerCell);
+
+                    // Spiele
+                    const gamesCell = document.createElement('td');
+                    gamesCell.textContent = player.games_played;
+                    row.appendChild(gamesCell);
+
+                    // Minuten
+                    const minutesCell = document.createElement('td');
+                    minutesCell.textContent = player.total_minutes;
+                    row.appendChild(minutesCell);
+
+                    // Punkte pro 90 Minuten
+                    const pointsPer90Cell = document.createElement('td');
+                    pointsPer90Cell.textContent = player.points_per_90_minutes ? player.points_per_90_minutes.toFixed(2) : 'n/a';
+                    row.appendChild(pointsPer90Cell);
+
+                    // Punkte
+                    const pointsCell = document.createElement('td');
+                    pointsCell.textContent = player.total_points;
+                    row.appendChild(pointsCell);
+
+                    tableBody.appendChild(row);
                 }
 
-                // Platz
-                const rankCell = document.createElement('td');
-                rankCell.textContent = (i + 1).toString();
-                row.appendChild(rankCell);
-
-                // Spieler
-                const playerCell = document.createElement('td');
-                playerCell.innerHTML = `<span class="shirt-number">${player.shirt_number}</span> ${player.player_name}`;
-                row.appendChild(playerCell);
-
-                // Spiele
-                const gamesCell = document.createElement('td');
-                gamesCell.textContent = player.games_played;
-                row.appendChild(gamesCell);
-
-                // Minuten
-                const minutesCell = document.createElement('td');
-                minutesCell.textContent = player.total_minutes;
-                row.appendChild(minutesCell);
-
-                // Punkte pro 90 Minuten
-                const pointsPer90Cell = document.createElement('td');
-                pointsPer90Cell.textContent = player.points_per_90_minutes ? player.points_per_90_minutes.toFixed(2) : 'n/a';
-                row.appendChild(pointsPer90Cell);
-
-                // Punkte
-                const pointsCell = document.createElement('td');
-                pointsCell.textContent = player.total_points;
-                row.appendChild(pointsCell);
-
-                tableBody.appendChild(row);
+                // Button text anpassen
+                if (rowsToShow === data.length) {
+                    expandButton.textContent = 'Weniger ▲';
+                } else if (data.length <= 10) {
+                    expandButton.display = 'none';
+                } else {
+                    expandButton.textContent = 'Mehr ▼';
+                }
             }
 
-            // Button text anpassen
-            if (rowsToShow === data.length) {
-                expandButton.textContent = 'Show Less ▲';
-            } else if (data.length <= 10) {
-                expandButton.display = 'none';
-            } else {
-                expandButton.textContent = 'Show More ▼';
-            }
-        }
+            // Initial nur 10 Zeilen anzeigen
+            renderTable(initialRows);
 
-        // Initial nur 10 Zeilen anzeigen
-        renderTable(initialRows);
-
-        // Button-Klick-Event
-        expandButton.onclick = function() {
-            isExpanded = !isExpanded;
-            if (isExpanded) {
-                renderTable('all');
-            } else {
-                renderTable(initialRows);
-            }
-        };
-    })
-    .catch(error => console.error(`Fehler beim Laden der Daten für ${tabId}:`, error));
+            // Button-Klick-Event
+            expandButton.onclick = function () {
+                isExpanded = !isExpanded;
+                if (isExpanded) {
+                    renderTable('all');
+                } else {
+                    renderTable(initialRows);
+                }
+            };
+        })
+        .catch(error => console.error(`Fehler beim Laden der Daten für ${tabId}:`, error));
 }
