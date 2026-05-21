@@ -30,13 +30,13 @@
     </header>
     <div class="ranking-container">
         <div class="tab-group">
-            <button class="tab-button active" data-tab="total">Gesamtplatzierung</button>
-            <button class="tab-button" data-tab="community">Community</button>
-            <button class="tab-button" data-tab="riky">Riky</button>
-            <button class="tab-button" data-tab="sebastian">Sebastian</button>
+            <button class="tab-button total-ranking active" data-tab="total">Gesamtplatzierung</button>
+            <button class="tab-button total-ranking" data-tab="community">Community</button>
+            <button class="tab-button total-ranking" data-tab="riky">Riky</button>
+            <button class="tab-button total-ranking" data-tab="sebastian">Sebastian</button>
         </div>
 
-        <div class="tab-content active" id="total">
+        <div class="tab-content total-ranking active" id="total">
             <table class="ranking-table" id="total-ranking">
                 <thead>
                     <tr>
@@ -53,7 +53,7 @@
             <button id="expand-button-total" class="expand-button">Mehr ▼</button>
         </div>
 
-        <div class="tab-content" id="community" style="display: none;">
+        <div class="tab-content total-ranking" id="community" style="display: none;">
             <table class="ranking-table" id="community-ranking">
                 <thead>
                     <tr>
@@ -70,7 +70,7 @@
             <button id="expand-button-community" class="expand-button">Mehr ▼</button>
         </div>
 
-        <div class="tab-content" id="riky" style="display: none;">
+        <div class="tab-content total-ranking" id="riky" style="display: none;">
             <table class="ranking-table" id="riky-ranking">
                 <thead>
                     <tr>
@@ -87,7 +87,7 @@
             <button id="expand-button-riky" class="expand-button">Mehr ▼</button>
         </div>
 
-        <div class="tab-content" id="sebastian" style="display: none;">
+        <div class="tab-content total-ranking" id="sebastian" style="display: none;">
             <table class="ranking-table" id="sebastian-ranking">
                 <thead>
                     <tr>
@@ -102,6 +102,63 @@
                 <tbody id="ranking-body-sebastian"></tbody>
             </table>
             <button id="expand-button-sebastian" class="expand-button">Mehr ▼</button>
+        </div>
+    </div>
+
+<!--Positionsranking-->
+    <div class="ranking-container">
+        <div class="tab-group">
+            <button class="tab-button position-ranking active" data-tab="defense">Defensive</button>
+            <button class="tab-button position-ranking" data-tab="midfield">Mittelfeld</button>
+            <button class="tab-button position-ranking" data-tab="attack">Angriff</button>
+        </div>
+
+        <div class="tab-content position-ranking active" id="defense">
+            <table class="ranking-table" id="defense-ranking">
+                <thead>
+                    <tr>
+                        <th>Rang</th>
+                        <th>Spieler</th>
+                        <th>Spiele</th>
+                        <th>Minuten</th>
+                        <th>Punkte/90min</th>
+                        <th>Punkte</th>
+                    </tr>
+                </thead>
+                <tbody id="ranking-body-defense"></tbody>
+            </table>
+        </div>
+
+        <div class="tab-content position-ranking" id="midfield" style="display: none;">
+            <table class="ranking-table" id="midfield-ranking">
+                <thead>
+                    <tr>
+                        <th>Rang</th>
+                        <th>Spieler</th>
+                        <th>Spiele</th>
+                        <th>Minuten</th>
+                        <th>Punkte/90min</th>
+                        <th>Punkte</th>
+                    </tr>
+                </thead>
+                <tbody id="ranking-body-midfield"></tbody>
+            </table>
+        </div>
+
+        <div class="tab-content position-ranking" id="attack" style="display: none;">
+            <table class="ranking-table" id="attack-ranking">
+                <thead>
+                    <tr>
+                        <th>Rang</th>
+                        <th>Spieler</th>
+                        <th>Spiele</th>
+                        <th>Minuten</th>
+                        <th>Punkte/90min</th>
+                        <th>Punkte</th>
+                    </tr>
+                </thead>
+                <tbody id="ranking-body-attack"></tbody>
+            </table>
         </div>
     </div>
     <!-- <div class="chart">

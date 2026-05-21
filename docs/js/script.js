@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', function () {
     loadRankingData('total', 'player_ranking.json');
 
     // register tab-button-listener
-    document.querySelectorAll('.tab-button').forEach(button => {
+    document.querySelectorAll('.tab-button.total-ranking').forEach(button => {
         button.addEventListener('click', () => {
-            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-            document.querySelectorAll('.tab-content').forEach(content => content.style.display = 'none');
+            document.querySelectorAll('.tab-button.total-ranking').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content.total-ranking').forEach(content => content.style.display = 'none');
 
             // add active class to clicked tab
             button.classList.add('active');
