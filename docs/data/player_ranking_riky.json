@@ -13,10 +13,10 @@
         "player_id": 18,
         "player_name": "Chris Führich",
         "shirt_number": 10,
-        "total_points": 31,
+        "total_points": 33,
         "games_played": 51,
         "total_minutes": 2549,
-        "points_per_90_minutes": 1.09,
+        "points_per_90_minutes": 1.17,
         "source": "Riky Palm"
     },
     {
@@ -70,6 +70,16 @@
         "source": "Riky Palm"
     },
     {
+        "player_id": 22,
+        "player_name": "Nikolas Nartey",
+        "shirt_number": 28,
+        "total_points": 17,
+        "games_played": 37,
+        "total_minutes": 1505,
+        "points_per_90_minutes": 1.02,
+        "source": "Riky Palm"
+    },
+    {
         "player_id": 27,
         "player_name": "Ermedin Demirovic",
         "shirt_number": 9,
@@ -87,16 +97,6 @@
         "games_played": 36,
         "total_minutes": 2441,
         "points_per_90_minutes": 0.59,
-        "source": "Riky Palm"
-    },
-    {
-        "player_id": 22,
-        "player_name": "Nikolas Nartey",
-        "shirt_number": 28,
-        "total_points": 16,
-        "games_played": 37,
-        "total_minutes": 1505,
-        "points_per_90_minutes": 0.96,
         "source": "Riky Palm"
     },
     {
@@ -120,6 +120,16 @@
         "source": "Riky Palm"
     },
     {
+        "player_id": 15,
+        "player_name": "Chema",
+        "shirt_number": 30,
+        "total_points": 13,
+        "games_played": 38,
+        "total_minutes": 1851,
+        "points_per_90_minutes": 0.63,
+        "source": "Riky Palm"
+    },
+    {
         "player_id": 8,
         "player_name": "Luca Jaquez",
         "shirt_number": 14,
@@ -137,16 +147,6 @@
         "games_played": 38,
         "total_minutes": 1612,
         "points_per_90_minutes": 0.61,
-        "source": "Riky Palm"
-    },
-    {
-        "player_id": 15,
-        "player_name": "Chema",
-        "shirt_number": 30,
-        "total_points": 10,
-        "games_played": 38,
-        "total_minutes": 1851,
-        "points_per_90_minutes": 0.49,
         "source": "Riky Palm"
     },
     {

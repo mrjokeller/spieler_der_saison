@@ -1,21 +1,21 @@
 [
     {
-        "player_id": 31,
-        "player_name": "Deniz Undav",
-        "shirt_number": 26,
-        "total_points": 106,
-        "games_played": 45,
-        "total_minutes": 3555,
-        "points_per_90_minutes": 2.68
-    },
-    {
         "player_id": 18,
         "player_name": "Chris Führich",
         "shirt_number": 10,
-        "total_points": 104,
+        "total_points": 109,
         "games_played": 51,
         "total_minutes": 2549,
-        "points_per_90_minutes": 3.67
+        "points_per_90_minutes": 3.85
+    },
+    {
+        "player_id": 31,
+        "player_name": "Deniz Undav",
+        "shirt_number": 26,
+        "total_points": 107,
+        "games_played": 45,
+        "total_minutes": 3555,
+        "points_per_90_minutes": 2.71
     },
     {
         "player_id": 3,
@@ -90,6 +90,24 @@
         "points_per_90_minutes": 1.08
     },
     {
+        "player_id": 15,
+        "player_name": "Chema",
+        "shirt_number": 30,
+        "total_points": 43,
+        "games_played": 38,
+        "total_minutes": 1851,
+        "points_per_90_minutes": 2.09
+    },
+    {
+        "player_id": 22,
+        "player_name": "Nikolas Nartey",
+        "shirt_number": 28,
+        "total_points": 39,
+        "games_played": 37,
+        "total_minutes": 1505,
+        "points_per_90_minutes": 2.33
+    },
+    {
         "player_id": 9,
         "player_name": "Finn Jeltsch",
         "shirt_number": 29,
@@ -97,24 +115,6 @@
         "games_played": 36,
         "total_minutes": 2441,
         "points_per_90_minutes": 1.29
-    },
-    {
-        "player_id": 15,
-        "player_name": "Chema",
-        "shirt_number": 30,
-        "total_points": 35,
-        "games_played": 38,
-        "total_minutes": 1851,
-        "points_per_90_minutes": 1.7
-    },
-    {
-        "player_id": 22,
-        "player_name": "Nikolas Nartey",
-        "shirt_number": 28,
-        "total_points": 35,
-        "games_played": 37,
-        "total_minutes": 1505,
-        "points_per_90_minutes": 2.09
     },
     {
         "player_id": 30,

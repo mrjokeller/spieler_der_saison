@@ -1,5 +1,25 @@
 [
     {
+        "player_id": 18,
+        "player_name": "Chris Führich",
+        "shirt_number": 10,
+        "total_points": 37,
+        "games_played": 51,
+        "total_minutes": 2549,
+        "points_per_90_minutes": 1.31,
+        "source": "Sebastian Rose"
+    },
+    {
+        "player_id": 31,
+        "player_name": "Deniz Undav",
+        "shirt_number": 26,
+        "total_points": 36,
+        "games_played": 45,
+        "total_minutes": 3555,
+        "points_per_90_minutes": 0.91,
+        "source": "Sebastian Rose"
+    },
+    {
         "player_id": 3,
         "player_name": "Alexander Nübel",
         "shirt_number": 33,
@@ -7,26 +27,6 @@
         "games_played": 48,
         "total_minutes": 4380,
         "points_per_90_minutes": 0.72,
-        "source": "Sebastian Rose"
-    },
-    {
-        "player_id": 18,
-        "player_name": "Chris Führich",
-        "shirt_number": 10,
-        "total_points": 35,
-        "games_played": 51,
-        "total_minutes": 2549,
-        "points_per_90_minutes": 1.24,
-        "source": "Sebastian Rose"
-    },
-    {
-        "player_id": 31,
-        "player_name": "Deniz Undav",
-        "shirt_number": 26,
-        "total_points": 35,
-        "games_played": 45,
-        "total_minutes": 3555,
-        "points_per_90_minutes": 0.89,
         "source": "Sebastian Rose"
     },
     {
@@ -93,10 +93,10 @@
         "player_id": 15,
         "player_name": "Chema",
         "shirt_number": 30,
-        "total_points": 12,
+        "total_points": 14,
         "games_played": 38,
         "total_minutes": 1851,
-        "points_per_90_minutes": 0.58,
+        "points_per_90_minutes": 0.68,
         "source": "Sebastian Rose"
     },
     {
@@ -120,6 +120,16 @@
         "source": "Sebastian Rose"
     },
     {
+        "player_id": 22,
+        "player_name": "Nikolas Nartey",
+        "shirt_number": 28,
+        "total_points": 10,
+        "games_played": 37,
+        "total_minutes": 1505,
+        "points_per_90_minutes": 0.6,
+        "source": "Sebastian Rose"
+    },
+    {
         "player_id": 9,
         "player_name": "Finn Jeltsch",
         "shirt_number": 29,
@@ -127,16 +137,6 @@
         "games_played": 36,
         "total_minutes": 2441,
         "points_per_90_minutes": 0.33,
-        "source": "Sebastian Rose"
-    },
-    {
-        "player_id": 22,
-        "player_name": "Nikolas Nartey",
-        "shirt_number": 28,
-        "total_points": 9,
-        "games_played": 37,
-        "total_minutes": 1505,
-        "points_per_90_minutes": 0.54,
         "source": "Sebastian Rose"
     },
     {

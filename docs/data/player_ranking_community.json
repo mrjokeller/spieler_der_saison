@@ -3,10 +3,10 @@
         "player_id": 18,
         "player_name": "Chris Führich",
         "shirt_number": 10,
-        "total_points": 38,
+        "total_points": 39,
         "games_played": 51,
         "total_minutes": 2549,
-        "points_per_90_minutes": 1.34,
+        "points_per_90_minutes": 1.38,
         "source": "Community"
     },
     {
@@ -83,10 +83,10 @@
         "player_id": 15,
         "player_name": "Chema",
         "shirt_number": 30,
-        "total_points": 13,
+        "total_points": 16,
         "games_played": 38,
         "total_minutes": 1851,
-        "points_per_90_minutes": 0.63,
+        "points_per_90_minutes": 0.78,
         "source": "Community"
     },
     {
@@ -97,6 +97,16 @@
         "games_played": 40,
         "total_minutes": 3433,
         "points_per_90_minutes": 0.31,
+        "source": "Community"
+    },
+    {
+        "player_id": 22,
+        "player_name": "Nikolas Nartey",
+        "shirt_number": 28,
+        "total_points": 12,
+        "games_played": 37,
+        "total_minutes": 1505,
+        "points_per_90_minutes": 0.72,
         "source": "Community"
     },
     {
@@ -127,16 +137,6 @@
         "games_played": 36,
         "total_minutes": 2441,
         "points_per_90_minutes": 0.37,
-        "source": "Community"
-    },
-    {
-        "player_id": 22,
-        "player_name": "Nikolas Nartey",
-        "shirt_number": 28,
-        "total_points": 10,
-        "games_played": 37,
-        "total_minutes": 1505,
-        "points_per_90_minutes": 0.6,
         "source": "Community"
     },
     {

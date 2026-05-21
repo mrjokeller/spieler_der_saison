@@ -8,7 +8,7 @@
         "competition": "Bundesliga",
         "date": "2025-11-22",
         "max_points_in_game": 10,
-        "total_points": 106
+        "total_points": 107
     },
     {
         "player_id": 17,
@@ -74,7 +74,7 @@
         "competition": "Bundesliga",
         "date": "2025-12-06",
         "max_points_in_game": 9,
-        "total_points": 35
+        "total_points": 39
     },
     {
         "player_id": 18,
@@ -85,7 +85,7 @@
         "competition": "Bundesliga",
         "date": "2026-03-01",
         "max_points_in_game": 8,
-        "total_points": 104
+        "total_points": 109
     },
     {
         "player_id": 18,
@@ -96,7 +96,7 @@
         "competition": "Europa League",
         "date": "2026-03-19",
         "max_points_in_game": 8,
-        "total_points": 104
+        "total_points": 109
     },
     {
         "player_id": 10,
@@ -162,7 +162,18 @@
         "competition": "Europa League",
         "date": "2026-01-29",
         "max_points_in_game": 8,
-        "total_points": 35
+        "total_points": 43
+    },
+    {
+        "player_id": 15,
+        "name": "Chema",
+        "opponent": "Eintracht Frankfurt",
+        "side": "away",
+        "result": "U",
+        "competition": "Bundesliga",
+        "date": "2026-05-16",
+        "max_points_in_game": 8,
+        "total_points": 43
     },
     {
         "player_id": 3,
