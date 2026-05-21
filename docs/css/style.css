@@ -145,33 +145,39 @@ body {
 
 .tab-group {
     display: flex;
-    background-color: #222;
-    border-radius: 5px;
-    padding: 5px;
+    border-bottom: 2px solid --dark-gray;
     margin-bottom: 20px;
-    border-radius: 100vh;
 }
 
 .tab-button {
     flex: 1;
-    padding: 10px;
+    padding: 10px 20px;
     background: none;
     border: none;
     color: white;
-    border-radius: 100vh;
     cursor: pointer;
     font-weight: bold;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
+    position: relative;
+    outline: none;
 }
 
 .tab-button:hover {
-    background-color: #444;
+    color: var(--vfb_red);
 }
 
 .tab-button.active {
-    background-color: var(--vfb_red);
-    color: var(--white);
-    border-radius: 100vh;
+    color: var(--vfb_red);
+}
+
+.tab-button.active::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--vfb_red);    
 }
 
 .tab-content {
