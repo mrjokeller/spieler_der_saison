@@ -1,0 +1,74 @@
+[
+    {
+        "player_id": 18,
+        "player_name": "Chris Führich",
+        "shirt_number": 10,
+        "total_points": 109,
+        "games_played": 51,
+        "total_minutes": 2549,
+        "points_per_90_minutes": 3.85
+    },
+    {
+        "player_id": 17,
+        "player_name": "Bilal El Khannouss",
+        "shirt_number": 11,
+        "total_points": 66,
+        "games_played": 40,
+        "total_minutes": 2576,
+        "points_per_90_minutes": 2.31
+    },
+    {
+        "player_id": 24,
+        "player_name": "Angelo Stiller",
+        "shirt_number": 6,
+        "total_points": 50,
+        "games_played": 51,
+        "total_minutes": 4149,
+        "points_per_90_minutes": 1.08
+    },
+    {
+        "player_id": 15,
+        "player_name": "Chema",
+        "shirt_number": 30,
+        "total_points": 43,
+        "games_played": 38,
+        "total_minutes": 1851,
+        "points_per_90_minutes": 2.09
+    },
+    {
+        "player_id": 22,
+        "player_name": "Nikolas Nartey",
+        "shirt_number": 28,
+        "total_points": 39,
+        "games_played": 37,
+        "total_minutes": 1505,
+        "points_per_90_minutes": 2.33
+    },
+    {
+        "player_id": 20,
+        "player_name": "Atakan Karazor",
+        "shirt_number": 16,
+        "total_points": 22,
+        "games_played": 44,
+        "total_minutes": 3213,
+        "points_per_90_minutes": 0.62
+    },
+    {
+        "player_id": 19,
+        "player_name": "Lazar Jovanovic",
+        "shirt_number": 45,
+        "total_points": 3,
+        "games_played": 6,
+        "total_minutes": 124,
+        "points_per_90_minutes": 2.18
+    },
+    {
+        "player_id": 25,
+        "player_name": "Yanik Spalt",
+        "shirt_number": 56,
+        "total_points": 1,
+        "games_played": 1,
+        "total_minutes": 9,
+        "points_per_90_minutes": null
+    }
+]

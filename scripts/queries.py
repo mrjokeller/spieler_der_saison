@@ -42,6 +42,45 @@ query_total_ranking = """
         total_points DESC;
 """
 
+def query_position_ranking(position):
+    having_clause = f'p.position = "{position}"' if position != "Defensive" else f'p.position = "Abwehr" OR p.position = "Tor"'
+    return f"""
+    WITH player_minutes AS (
+        SELECT
+            player_id,
+            SUM(minutes) AS total_minutes,
+            COUNT(DISTINCT game_id) AS games_played
+        FROM
+            player_data
+        GROUP BY
+            player_id
+    )
+    SELECT
+        p.player_id AS player_id,
+        p.name AS player_name,
+        MAX(p.shirt_number) AS shirt_number,
+        SUM(pp.points) AS total_points,
+        pm.games_played,
+        pm.total_minutes,
+        CASE
+            WHEN pm.total_minutes >= 90
+            THEN ROUND((SUM(pp.points) * 90.0 / NULLIF(pm.total_minutes, 0)), 2)
+            ELSE NULL
+        END AS points_per_90_minutes
+    FROM
+        player_points pp
+    JOIN
+        player p ON pp.player_id = p.player_id
+    LEFT JOIN
+        player_minutes pm ON pp.player_id = pm.player_id
+    GROUP BY
+        p.player_id, p.name
+    HAVING
+        {having_clause}
+    ORDER BY
+        total_points DESC;
+"""
+
 query_line_chart = """
     WITH game_order AS (
         -- Spiele in der richtigen Reihenfolge (nach Datum)

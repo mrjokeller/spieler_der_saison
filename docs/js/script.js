@@ -1,12 +1,29 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Standardmäßig die Gesamtplatzierung laden
     loadRankingData('total', 'player_ranking.json');
+    loadRankingData('defense', 'defense_ranking.json');
 
+    // load data for selected tab
+    const jsonFiles = {
+        total: 'player_ranking.json',
+        community: 'player_ranking_community.json',
+        riky: 'player_ranking_riky.json',
+        sebastian: 'player_ranking_sebastian.json',
+        defense: 'defense_ranking.json',
+        midfield: 'midfield_ranking.json',
+        attack: 'attack_ranking.json'
+    };
+
+    addTabButtonFunction('total-ranking', jsonFiles);
+    addTabButtonFunction('position-ranking', jsonFiles);
+});
+
+function addTabButtonFunction(htmlClass, jsonFiles) {
     // register tab-button-listener
-    document.querySelectorAll('.tab-button.total-ranking').forEach(button => {
+    document.querySelectorAll(`.tab-button.${htmlClass}`).forEach(button => {
         button.addEventListener('click', () => {
-            document.querySelectorAll('.tab-button.total-ranking').forEach(btn => btn.classList.remove('active'));
-            document.querySelectorAll('.tab-content.total-ranking').forEach(content => content.style.display = 'none');
+            document.querySelectorAll(`.tab-button.${htmlClass}`).forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll(`.tab-content.${htmlClass}`).forEach(content => content.style.display = 'none');
 
             // add active class to clicked tab
             button.classList.add('active');
@@ -16,18 +33,10 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log(tabId);
             document.getElementById(tabId).style.display = 'block';
 
-            // load data for selected tab
-            const jsonFiles = {
-                total: 'player_ranking.json',
-                community: 'player_ranking_community.json',
-                riky: 'player_ranking_riky.json',
-                sebastian: 'player_ranking_sebastian.json'
-            };
-
             loadRankingData(tabId, jsonFiles[tabId]);
         });
     });
-});
+}
 
 // Load data and populate table with expand functionality
 function loadRankingData(tabId, jsonFile) {

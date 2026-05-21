@@ -1,6 +1,7 @@
 from queries import (
     query_total_ranking,
     query_ranking,
+    query_position_ranking,
     query_line_chart,
     query_most_points,
 )
@@ -34,6 +35,24 @@ EXPORT_TASKS = [
     {
         "query": query_ranking("Sebastian Rose"),
         "output_file": "player_ranking_sebastian.json",
+        "processor": None,
+        "active": True,
+    },
+    {
+        "query": query_position_ranking("Angriff"),
+        "output_file": "attack_ranking.json",
+        "processor": None,
+        "active": True,
+    },
+    {
+        "query": query_position_ranking("Mittelfeld"),
+        "output_file": "midfield_ranking.json",
+        "processor": None,
+        "active": True,
+    },
+    {
+        "query": query_position_ranking("Defensive"),
+        "output_file": "defense_ranking.json",
         "processor": None,
         "active": True,
     },
