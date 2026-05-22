@@ -144,40 +144,33 @@ body {
 }
 
 .tab-group {
-    display: flex;
-    border-bottom: 2px solid --dark-gray;
+    display: box;
     margin-bottom: 20px;
 }
 
 .tab-button {
-    flex: 1;
-    padding: 10px 20px;
-    background: none;
-    border: none;
-    color: white;
+    padding: 8px 16px;
+    margin-right: 8px;
+    background: var(--medium-gray);
+    border-radius: 100vh;
+    border: 0.75px solid whitesmoke;
+    color: whitesmoke;
     cursor: pointer;
     font-weight: bold;
-    transition: all 0.3s;
+    transition: background-color 0.3s;
     position: relative;
     outline: none;
 }
 
 .tab-button:hover {
-    color: var(--vfb_red);
+    color: white;
+    border: 0.5px solid var(--vfb_red);
 }
 
 .tab-button.active {
-    color: var(--vfb_red);
-}
-
-.tab-button.active::after {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: var(--vfb_red);    
+    color: white;
+    background-color: var(--vfb_red);
+    border: none;
 }
 
 .tab-content {
