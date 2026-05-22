@@ -106,60 +106,33 @@
     </div>
 
     <!--Positionsranking-->
-    <div class="ranking-container">
-        <div class="tab-group">
-            <button class="tab-button position-ranking active" data-tab="defense">Defensive</button>
-            <button class="tab-button position-ranking" data-tab="midfield">Mittelfeld</button>
-            <button class="tab-button position-ranking" data-tab="attack">Angriff</button>
-        </div>
+    <div class="compact-ranking-wrapper">
 
-        <div class="tab-content position-ranking active" id="defense">
-            <table class="ranking-table" id="defense-ranking">
-                <thead>
-                    <tr>
-                        <th>Rang</th>
-                        <th>Spieler</th>
-                        <th>Spiele</th>
-                        <th>Minuten</th>
-                        <th>Punkte/90min</th>
-                        <th>Punkte</th>
-                    </tr>
-                </thead>
-                <tbody id="ranking-body-defense"></tbody>
+        <div class="compact-ranking-container">
+            <div class="compact-ranking-header">
+                Defensive
+            </div>
+            <table class="compact-ranking-table">
+                <tbody id="compact-ranking-body-defense"></tbody>
+            </table>
+        </div>
+        <div class="compact-ranking-container">
+            <div class="compact-ranking-header">
+                Mittelfeld
+            </div>
+            <table class="compact-ranking-table">
+                <tbody id="compact-ranking-body-midfield"></tbody>
+            </table>
+        </div>
+        <div class="compact-ranking-container">
+            <div class="compact-ranking-header">
+                Angriff
+            </div>
+            <table class="compact-ranking-table">
+                <tbody id="compact-ranking-body-attack"></tbody>
             </table>
         </div>
 
-        <div class="tab-content position-ranking" id="midfield" style="display: none;">
-            <table class="ranking-table" id="midfield-ranking">
-                <thead>
-                    <tr>
-                        <th>Rang</th>
-                        <th>Spieler</th>
-                        <th>Spiele</th>
-                        <th>Minuten</th>
-                        <th>Punkte/90min</th>
-                        <th>Punkte</th>
-                    </tr>
-                </thead>
-                <tbody id="ranking-body-midfield"></tbody>
-            </table>
-        </div>
-
-        <div class="tab-content position-ranking" id="attack" style="display: none;">
-            <table class="ranking-table" id="attack-ranking">
-                <thead>
-                    <tr>
-                        <th>Rang</th>
-                        <th>Spieler</th>
-                        <th>Spiele</th>
-                        <th>Minuten</th>
-                        <th>Punkte/90min</th>
-                        <th>Punkte</th>
-                    </tr>
-                </thead>
-                <tbody id="ranking-body-attack"></tbody>
-            </table>
-        </div>
     </div>
     <!-- <div class="chart">
         <canvas id="line-chart"></canvas>

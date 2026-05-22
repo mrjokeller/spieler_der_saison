@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Standardmäßig die Gesamtplatzierung laden
     loadRankingData('total', 'player_ranking.json');
-    loadRankingData('defense', 'defense_ranking.json');
+    loadCompactRankingData('defense', 'defense_ranking.json');
+    loadCompactRankingData('midfield', 'midfield_ranking.json');
+    loadCompactRankingData('attack', 'attack_ranking.json');
 
     // load data for selected tab
     const jsonFiles = {
@@ -65,11 +67,13 @@ function loadRankingData(tabId, jsonFile) {
 
                     // Platz
                     const rankCell = document.createElement('td');
+                    rankCell.classList.add('td-rank');
                     rankCell.textContent = (i + 1).toString();
                     row.appendChild(rankCell);
 
                     // Spieler
                     const playerCell = document.createElement('td');
+                    playerCell.classList.add('td-player');
                     playerCell.innerHTML = `<span class="shirt-number">${player.shirt_number}</span> ${player.player_name}`;
                     row.appendChild(playerCell);
 
@@ -90,6 +94,7 @@ function loadRankingData(tabId, jsonFile) {
 
                     // Punkte
                     const pointsCell = document.createElement('td');
+                    pointsCell.classList.add('td-points');
                     pointsCell.textContent = player.total_points;
                     row.appendChild(pointsCell);
 
@@ -118,6 +123,47 @@ function loadRankingData(tabId, jsonFile) {
                     renderTable(initialRows);
                 }
             };
+        })
+        .catch(error => console.error(`Fehler beim Laden der Daten für ${tabId}:`, error));
+}
+
+function loadCompactRankingData(tabId, jsonFile) {
+    fetch(`data/${jsonFile}`)
+        .then(response => response.json())
+        .then(data => {
+            const tableBody = document.getElementById(`compact-ranking-body-${tabId}`);
+
+            tableBody.innerHTML = '';
+            const rowsToShow = 3;
+
+            for (let i = 0; i < rowsToShow; i++) {
+                const row = document.createElement('tr');
+                const player = data[i];
+
+                if (i < 3) {
+                    row.classList.add(`rank-${i + 1}`);
+                }
+
+                // Platz
+                const rankCell = document.createElement('td');
+                rankCell.classList.add('td-rank-compact');
+                rankCell.textContent = (i + 1).toString();
+                row.appendChild(rankCell);
+
+                // Spieler
+                const playerCell = document.createElement('td');
+                playerCell.classList.add('td-player-compact');
+                playerCell.innerHTML = player.player_name;
+                row.appendChild(playerCell);
+
+                // Punkte
+                const pointsCell = document.createElement('td');
+                pointsCell.classList.add('td-points-compact');
+                pointsCell.textContent = player.total_points;
+                row.appendChild(pointsCell);
+
+                tableBody.appendChild(row);
+            }
         })
         .catch(error => console.error(`Fehler beim Laden der Daten für ${tabId}:`, error));
 }
