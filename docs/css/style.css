@@ -156,7 +156,7 @@ body {
     border: 0.75px solid whitesmoke;
     color: whitesmoke;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: normal;
     transition: background-color 0.3s;
     position: relative;
     outline: none;
