@@ -2,6 +2,7 @@ from queries import (
     query_total_ranking,
     query_ranking,
     query_position_ranking,
+    query_side_ranking,
     query_line_chart,
     query_most_points,
 )
@@ -53,6 +54,18 @@ EXPORT_TASKS = [
     {
         "query": query_position_ranking("Defensive"),
         "output_file": "defense_ranking.json",
+        "processor": None,
+        "active": True,
+    },
+    {
+        "query": query_side_ranking("home"),
+        "output_file": "home_ranking.json",
+        "processor": None,
+        "active": True,
+    },
+    {
+        "query": query_side_ranking("away"),
+        "output_file": "away_ranking.json",
         "processor": None,
         "active": True,
     },

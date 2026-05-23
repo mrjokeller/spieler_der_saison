@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function () {
     loadCompactRankingData('defense', 'defense_ranking.json');
     loadCompactRankingData('midfield', 'midfield_ranking.json');
     loadCompactRankingData('attack', 'attack_ranking.json');
+    loadCompactRankingData('home', 'home_ranking.json');
+    loadCompactRankingData('away', 'away_ranking.json');
 
     // load data for selected tab
     const jsonFiles = {

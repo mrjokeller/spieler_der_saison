@@ -81,6 +81,27 @@ def query_position_ranking(position):
         total_points DESC;
 """
 
+def query_side_ranking(side):
+    return f"""
+    SELECT
+        p.player_id AS player_id,
+        p.name AS player_name,
+        MAX(p.shirt_number) AS shirt_number,
+        SUM(pp.points) AS total_points
+    FROM
+        player_points pp
+    JOIN
+        player p ON pp.player_id = p.player_id
+    LEFT JOIN 
+        games g ON pp.game_id = g.game_id
+    GROUP BY
+        p.player_id, p.name, g.side
+    HAVING
+        g.side = "{side}"
+    ORDER BY
+        total_points DESC;
+"""
+
 query_line_chart = """
     WITH game_order AS (
         -- Spiele in der richtigen Reihenfolge (nach Datum)
