@@ -1,0 +1,44 @@
+[
+    {
+        "player_id": 24,
+        "player_name": "Angelo Stiller",
+        "shirt_number": 6,
+        "total_points": null,
+        "season": "2024-2025"
+    },
+    {
+        "player_id": 35,
+        "player_name": "Serhou Guirassy",
+        "shirt_number": 9,
+        "total_points": null,
+        "season": "2023-2024"
+    },
+    {
+        "player_id": 34,
+        "player_name": "Wataru Endo",
+        "shirt_number": 3,
+        "total_points": null,
+        "season": "2022-2023"
+    },
+    {
+        "player_id": 34,
+        "player_name": "Wataru Endo",
+        "shirt_number": 3,
+        "total_points": null,
+        "season": "2021-2022"
+    },
+    {
+        "player_id": 34,
+        "player_name": "Wataru Endo",
+        "shirt_number": 3,
+        "total_points": null,
+        "season": "2020-2021"
+    },
+    {
+        "player_id": 36,
+        "player_name": "Mario Gomez",
+        "shirt_number": 27,
+        "total_points": null,
+        "season": "2019-2020"
+    }
+]

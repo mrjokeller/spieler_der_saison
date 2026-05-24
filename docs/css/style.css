@@ -332,3 +332,99 @@ footer {
     margin: 32px;
     font-size: small;
 }
+
+/* Historientimeline */
+
+.timeline {
+    max-width: 800px;
+    margin: 40px auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: var(--light-gray);
+    top: 0;
+    bottom: 0;
+    left: 100px;
+}
+
+.timeline-item {
+    padding-left: 60px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-season {
+    position: absolute;
+    right: 0;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    color: white;
+    font-size: 0.9em;
+}
+
+.player-card {
+    background-color: var(--dark-gray);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.player-number {
+    color: var(--vfb_red);
+    display: flex;
+    min-width: 5.5rem;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.player-info {
+    flex-grow: 1;
+}
+
+.player-name {
+    color: white;
+    font-size: 1.3em;
+    margin: 0 0 5px 0;
+}
+
+.player-points {
+    font-size: 0.9em;
+    color: white;
+}
+
+.no-data {
+    color: var(--light-gray);
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .timeline {
+        margin: 40px auto;
+        position: relative;
+    }
+
+    .player-card {
+        margin-left: 0;
+    }
+
+    .player-number {
+        font-size: 2rem;
+        min-width: 4rem;
+    }
+
+    #logo {
+        width: 200px;
+        height: auto;
+    }
+}
