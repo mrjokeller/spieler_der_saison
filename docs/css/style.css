@@ -319,6 +319,10 @@ a {
     color: var(--vfb_red);
 }
 
+.footer-link {
+    margin: 0.5rem;
+}
+
 .chart {
     margin: 32px;
 }
