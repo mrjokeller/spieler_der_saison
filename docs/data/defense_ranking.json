@@ -4,45 +4,45 @@
         "player_name": "Alexander Nübel",
         "shirt_number": 33,
         "total_points": 71,
-        "games_played": 48,
-        "total_minutes": 4380,
-        "points_per_90_minutes": 1.46
+        "games_played": 49,
+        "total_minutes": 4470,
+        "points_per_90_minutes": 1.43
     },
     {
         "player_id": 10,
         "player_name": "Maximilian Mittelstädt",
         "shirt_number": 7,
         "total_points": 56,
-        "games_played": 49,
-        "total_minutes": 3702,
-        "points_per_90_minutes": 1.36
+        "games_played": 50,
+        "total_minutes": 3792,
+        "points_per_90_minutes": 1.33
     },
     {
         "player_id": 7,
         "player_name": "Ramon Hendriks",
         "shirt_number": 3,
         "total_points": 53,
-        "games_played": 48,
-        "total_minutes": 3234,
-        "points_per_90_minutes": 1.47
+        "games_played": 49,
+        "total_minutes": 3324,
+        "points_per_90_minutes": 1.44
     },
     {
         "player_id": 6,
         "player_name": "Jeff Chabot",
         "shirt_number": 24,
         "total_points": 52,
-        "games_played": 40,
-        "total_minutes": 3433,
-        "points_per_90_minutes": 1.36
+        "games_played": 41,
+        "total_minutes": 3523,
+        "points_per_90_minutes": 1.33
     },
     {
         "player_id": 9,
         "player_name": "Finn Jeltsch",
         "shirt_number": 29,
         "total_points": 35,
-        "games_played": 36,
-        "total_minutes": 2441,
-        "points_per_90_minutes": 1.29
+        "games_played": 37,
+        "total_minutes": 2467,
+        "points_per_90_minutes": 1.28
     },
     {
         "player_id": 5,
@@ -58,9 +58,9 @@
         "player_name": "Luca Jaquez",
         "shirt_number": 14,
         "total_points": 18,
-        "games_played": 25,
-        "total_minutes": 1558,
-        "points_per_90_minutes": 1.04
+        "games_played": 26,
+        "total_minutes": 1622,
+        "points_per_90_minutes": 1.0
     },
     {
         "player_id": 14,

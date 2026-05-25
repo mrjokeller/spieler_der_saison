@@ -4,45 +4,45 @@
         "player_name": "Chris Führich",
         "shirt_number": 10,
         "total_points": 109,
-        "games_played": 51,
-        "total_minutes": 2549,
-        "points_per_90_minutes": 3.85
+        "games_played": 52,
+        "total_minutes": 2627,
+        "points_per_90_minutes": 3.73
     },
     {
         "player_id": 17,
         "player_name": "Bilal El Khannouss",
         "shirt_number": 11,
         "total_points": 66,
-        "games_played": 40,
-        "total_minutes": 2576,
-        "points_per_90_minutes": 2.31
+        "games_played": 41,
+        "total_minutes": 2588,
+        "points_per_90_minutes": 2.3
     },
     {
         "player_id": 24,
         "player_name": "Angelo Stiller",
         "shirt_number": 6,
         "total_points": 50,
-        "games_played": 51,
-        "total_minutes": 4149,
-        "points_per_90_minutes": 1.08
+        "games_played": 52,
+        "total_minutes": 4239,
+        "points_per_90_minutes": 1.06
     },
     {
         "player_id": 15,
         "player_name": "Chema",
         "shirt_number": 30,
         "total_points": 43,
-        "games_played": 38,
-        "total_minutes": 1851,
-        "points_per_90_minutes": 2.09
+        "games_played": 39,
+        "total_minutes": 1935,
+        "points_per_90_minutes": 2.0
     },
     {
         "player_id": 22,
         "player_name": "Nikolas Nartey",
         "shirt_number": 28,
         "total_points": 39,
-        "games_played": 37,
-        "total_minutes": 1505,
-        "points_per_90_minutes": 2.33
+        "games_played": 38,
+        "total_minutes": 1511,
+        "points_per_90_minutes": 2.32
     },
     {
         "player_id": 20,

@@ -1,25 +1,30 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Standardmäßig die Gesamtplatzierung laden
     loadRankingData('total', 'player_ranking.json');
+    loadRankingData('community', 'player_ranking_community.json');
+    loadRankingData('riky', 'player_ranking_riky.json');
+    loadRankingData('sebastian', 'player_ranking_sebastian.json');
     loadCompactRankingData('defense', 'defense_ranking.json');
     loadCompactRankingData('midfield', 'midfield_ranking.json');
     loadCompactRankingData('attack', 'attack_ranking.json');
     loadCompactRankingData('home', 'home_ranking.json');
     loadCompactRankingData('away', 'away_ranking.json');
+    loadCompactRankingData('bundesliga', 'bundesliga_ranking.json');
+    loadCompactRankingData('euroleague', 'euroleague_ranking.json');
+    loadCompactRankingData('dfbpokal', 'dfbpokal_ranking.json');
+    loadCompactRankingData('votes', 'votes_ranking.json');
+    loadCompactRankingData('highestwin', 'most_points_in_game_ranking.json');
+    loadCompactRankingData('streak', 'longest_streak_ranking.json');
 
     // load data for selected tab
     const jsonFiles = {
         total: 'player_ranking.json',
         community: 'player_ranking_community.json',
         riky: 'player_ranking_riky.json',
-        sebastian: 'player_ranking_sebastian.json',
-        defense: 'defense_ranking.json',
-        midfield: 'midfield_ranking.json',
-        attack: 'attack_ranking.json'
+        sebastian: 'player_ranking_sebastian.json'
     };
 
     addTabButtonFunction('total-ranking', jsonFiles);
-    addTabButtonFunction('position-ranking', jsonFiles);
 });
 
 function addTabButtonFunction(htmlClass, jsonFiles) {
@@ -134,7 +139,6 @@ function loadCompactRankingData(tabId, jsonFile) {
         .then(response => response.json())
         .then(data => {
             const tableBody = document.getElementById(`compact-ranking-body-${tabId}`);
-
             tableBody.innerHTML = '';
             const rowsToShow = 3;
 
@@ -161,7 +165,13 @@ function loadCompactRankingData(tabId, jsonFile) {
                 // Punkte
                 const pointsCell = document.createElement('td');
                 pointsCell.classList.add('td-points-compact');
-                pointsCell.textContent = player.total_points;
+                if (jsonFile === "votes_ranking.json") {
+                    pointsCell.textContent = player.total_votes;
+                } else if (jsonFile === "longest_streak_ranking.json") {
+                    pointsCell.textContent = player.longest_streak;
+                } else {
+                    pointsCell.textContent = player.total_points;
+                }
                 row.appendChild(pointsCell);
 
                 tableBody.appendChild(row);

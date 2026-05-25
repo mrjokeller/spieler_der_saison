@@ -102,7 +102,44 @@ def query_side_ranking(side):
         total_points DESC;
 """
 
-query_line_chart = """
+def query_competition_ranking(competition):
+    return f"""
+    SELECT
+        p.player_id AS player_id,
+        p.name AS player_name,
+        p.shirt_number AS shirt_number,
+        SUM(pp.points) AS total_points
+    FROM
+        player_points pp
+    JOIN
+        player p ON pp.player_id = p.player_id
+    LEFT JOIN 
+        games g ON pp.game_id = g.game_id
+    GROUP BY
+        p.player_id, p.name, g.competition
+    HAVING
+        g.competition = "{competition}"
+    ORDER BY
+        total_points DESC;
+    """
+
+query_most_votes = """
+    SELECT
+        p.player_id AS player_id,
+        p.name AS player_name,
+        p.shirt_number AS shirt_number,
+        SUM(pp.votes) AS total_votes
+    FROM
+        player_points pp
+    JOIN
+        player p ON pp.player_id = p.player_id
+    GROUP BY
+        p.player_id, p.name
+    ORDER BY
+        total_votes DESC;
+"""
+
+query_points_progression = """
     WITH game_order AS (
         -- Spiele in der richtigen Reihenfolge (nach Datum)
         SELECT
@@ -154,19 +191,12 @@ query_line_chart = """
     )
     -- Top 10 Spieler nach Gesamtpunkten
     SELECT
-        cp.player_name AS label,
-        GROUP_CONCAT(cp.cumulative_points, ', ') AS data
+        cp.player_name AS player_name,
+        GROUP_CONCAT(cp.cumulative_points, ', ') AS data_points
     FROM
         cumulative_points cp
     JOIN
         total_points_per_player tp ON cp.player_id = tp.player_id
-    WHERE
-        tp.player_id IN (
-            SELECT player_id
-            FROM total_points_per_player
-            ORDER BY total_points DESC
-            LIMIT 10
-        )
     GROUP BY
         cp.player_name
     ORDER BY
@@ -218,14 +248,14 @@ query_most_points = """
     )
     SELECT
         ppg.player_id,
-        ppg.name,
+        ppg.name AS player_name,
         ppg.opponent,
         ppg.side,
         ppg.result,
         ppg.competition,
         ppg.date,
-        ppg.game_points AS max_points_in_game,
-        tp.total AS total_points
+        ppg.game_points AS total_points,
+        tp.total AS total_points_reference
     FROM
         points_per_game ppg
     JOIN

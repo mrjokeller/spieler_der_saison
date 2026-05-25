@@ -4,35 +4,35 @@
         "player_name": "Deniz Undav",
         "shirt_number": 26,
         "total_points": 107,
-        "games_played": 45,
-        "total_minutes": 3555,
-        "points_per_90_minutes": 2.71
+        "games_played": 46,
+        "total_minutes": 3645,
+        "points_per_90_minutes": 2.64
     },
     {
         "player_id": 27,
         "player_name": "Ermedin Demirovic",
         "shirt_number": 9,
         "total_points": 62,
-        "games_played": 37,
-        "total_minutes": 2272,
-        "points_per_90_minutes": 2.46
+        "games_played": 38,
+        "total_minutes": 2356,
+        "points_per_90_minutes": 2.37
     },
     {
         "player_id": 29,
         "player_name": "Jamie Leweling",
         "shirt_number": 18,
         "total_points": 52,
-        "games_played": 49,
-        "total_minutes": 3443,
-        "points_per_90_minutes": 1.36
+        "games_played": 50,
+        "total_minutes": 3533,
+        "points_per_90_minutes": 1.32
     },
     {
         "player_id": 30,
         "player_name": "Tiago Tomas",
         "shirt_number": 8,
         "total_points": 33,
-        "games_played": 38,
-        "total_minutes": 1612,
+        "games_played": 39,
+        "total_minutes": 1618,
         "points_per_90_minutes": 1.84
     },
     {

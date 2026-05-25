@@ -3,13 +3,15 @@ from queries import (
     query_ranking,
     query_position_ranking,
     query_side_ranking,
-    query_line_chart,
+    query_competition_ranking,
+    query_points_progression,
     query_most_points,
+    query_most_votes
 )
 from db_utils import execute_query
 from export_utils import export_to_json, process_and_export
 from config import DEFAULT_DB_NAME, JSON_PATH, TEST_JSON_PATH
-from processors import prepare_chart_data
+from processors import longest_streak
 
 is_test = False
 export_path = TEST_JSON_PATH if is_test else JSON_PATH
@@ -70,15 +72,39 @@ EXPORT_TASKS = [
         "active": True,
     },
     {
-        "query": query_line_chart,
-        "output_file": "line_chart_data.json",
-        "processor": prepare_chart_data,
-        "active": False,
+        "query": query_competition_ranking("Bundesliga"),
+        "output_file": "bundesliga_ranking.json",
+        "processor": None,
+        "active": True
+    },
+    {
+        "query": query_competition_ranking("Europa League"),
+        "output_file": "euroleague_ranking.json",
+        "processor": None,
+        "active": True
+    },
+    {
+        "query": query_competition_ranking("DFB-Pokal"),
+        "output_file": "dfbpokal_ranking.json",
+        "processor": None,
+        "active": True
+    },
+    {
+        "query": query_most_votes,
+        "output_file": "votes_ranking.json",
+        "processor": None,
+        "active": True
     },
     {
         "query": query_most_points,
-        "output_file": "most_points_in_game.json",
+        "output_file": "most_points_in_game_ranking.json",
         "processor": None,
+        "active": True,
+    },
+    {
+        "query": query_points_progression,
+        "output_file": "longest_streak_ranking.json",
+        "processor": longest_streak,
         "active": True,
     },
 ]
