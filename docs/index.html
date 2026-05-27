@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VfBSTR - Spieler der Saison</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <script src="js/script.js"></script>
     <script src="https://kit.fontawesome.com/db322585d5.js" crossorigin="anonymous"></script>
 </head>
@@ -109,93 +113,108 @@
     <!--Positionsranking-->
     <div class="compact-ranking-wrapper">
 
+        <h2 class="section-header">Position</h2>
         <div class="compact-ranking-container">
-            <div class="compact-ranking-header">
-                Defensive
+            <div class="compact-ranking-card">
+                <div class="compact-ranking-card-header">
+                    Defensive
+                </div>
+                <table class="compact-ranking-card-table">
+                    <tbody id="compact-ranking-card-body-defense"></tbody>
+                </table>
             </div>
-            <table class="compact-ranking-table">
-                <tbody id="compact-ranking-body-defense"></tbody>
-            </table>
+            <div class="compact-ranking-card">
+                <div class="compact-ranking-card-header">
+                    Mittelfeld
+                </div>
+                <table class="compact-ranking-card-table">
+                    <tbody id="compact-ranking-card-body-midfield"></tbody>
+                </table>
+            </div>
+            <div class="compact-ranking-card">
+                <div class="compact-ranking-card-header">
+                    Angriff
+                </div>
+                <table class="compact-ranking-card-table">
+                    <tbody id="compact-ranking-card-body-attack"></tbody>
+                </table>
+            </div>
         </div>
+        <h2 class="section-header">Spielort</h2>
         <div class="compact-ranking-container">
-            <div class="compact-ranking-header">
-                Mittelfeld
+
+            <div class="compact-ranking-card">
+                <div class="compact-ranking-card-header">
+                    Heimspiele
+                </div>
+                <table class="compact-ranking-card-table">
+                    <tbody id="compact-ranking-card-body-home"></tbody>
+                </table>
             </div>
-            <table class="compact-ranking-table">
-                <tbody id="compact-ranking-body-midfield"></tbody>
-            </table>
+            <div class="compact-ranking-card">
+                <div class="compact-ranking-card-header">
+                    Auswärtsspiele
+                </div>
+                <table class="compact-ranking-card-table">
+                    <tbody id="compact-ranking-card-body-away"></tbody>
+                </table>
+            </div>
         </div>
+        <h2 class="section-header">Wettbewerb</h2>
         <div class="compact-ranking-container">
-            <div class="compact-ranking-header">
-                Angriff
+
+            <div class="compact-ranking-card">
+                <div class="compact-ranking-card-header">
+                    Bundesliga
+                </div>
+                <table class="compact-ranking-card-table">
+                    <tbody id="compact-ranking-card-body-bundesliga"></tbody>
+                </table>
             </div>
-            <table class="compact-ranking-table">
-                <tbody id="compact-ranking-body-attack"></tbody>
-            </table>
+            <div class="compact-ranking-card">
+                <div class="compact-ranking-card-header">
+                    Europa League
+                </div>
+                <table class="compact-ranking-card-table">
+                    <tbody id="compact-ranking-card-body-euroleague"></tbody>
+                </table>
+            </div>
+            <div class="compact-ranking-card">
+                <div class="compact-ranking-card-header">
+                    DFB-Pokal
+                </div>
+                <table class="compact-ranking-card-table">
+                    <tbody id="compact-ranking-card-body-dfbpokal"></tbody>
+                </table>
+            </div>
         </div>
+        <h2 class="section-header">Sonstige Statistiken</h2>
         <div class="compact-ranking-container">
-            <div class="compact-ranking-header">
-                Heimspiele
+
+            <div class="compact-ranking-card">
+                <div class="compact-ranking-card-header">
+                    Meiste Stimmen
+                </div>
+                <table class="compact-ranking-card-table">
+                    <tbody id="compact-ranking-card-body-votes"></tbody>
+                </table>
             </div>
-            <table class="compact-ranking-table">
-                <tbody id="compact-ranking-body-home"></tbody>
-            </table>
-        </div>
-        <div class="compact-ranking-container">
-            <div class="compact-ranking-header">
-                Auswärtsspiele
+            <div class="compact-ranking-card">
+                <div class="compact-ranking-card-header">
+                    Höchste Punktzahl
+                </div>
+                <table class="compact-ranking-card-table">
+                    <tbody id="compact-ranking-card-body-highestwin"></tbody>
+                </table>
             </div>
-            <table class="compact-ranking-table">
-                <tbody id="compact-ranking-body-away"></tbody>
-            </table>
-        </div>
-        <div class="compact-ranking-container">
-            <div class="compact-ranking-header">
-                Bundesliga
+            <div class="compact-ranking-card">
+                <div class="compact-ranking-card-header">
+                    Längster Streak
+                </div>
+                <table class="compact-ranking-card-table">
+                    <tbody id="compact-ranking-card-body-streak"></tbody>
+                </table>
             </div>
-            <table class="compact-ranking-table">
-                <tbody id="compact-ranking-body-bundesliga"></tbody>
-            </table>
-        </div>
-        <div class="compact-ranking-container">
-            <div class="compact-ranking-header">
-                Europa League
-            </div>
-            <table class="compact-ranking-table">
-                <tbody id="compact-ranking-body-euroleague"></tbody>
-            </table>
-        </div>
-        <div class="compact-ranking-container">
-            <div class="compact-ranking-header">
-                DFB-Pokal
-            </div>
-            <table class="compact-ranking-table">
-                <tbody id="compact-ranking-body-dfbpokal"></tbody>
-            </table>
-        </div>
-        <div class="compact-ranking-container">
-            <div class="compact-ranking-header">
-                Meiste Stimmen
-            </div>
-            <table class="compact-ranking-table">
-                <tbody id="compact-ranking-body-votes"></tbody>
-            </table>
-        </div>
-        <div class="compact-ranking-container">
-            <div class="compact-ranking-header">
-                Höchste Punktzahl
-            </div>
-            <table class="compact-ranking-table">
-                <tbody id="compact-ranking-body-highestwin"></tbody>
-            </table>
-        </div>
-        <div class="compact-ranking-container">
-            <div class="compact-ranking-header">
-                Längster Streak
-            </div>
-            <table class="compact-ranking-table">
-                <tbody id="compact-ranking-body-streak"></tbody>
-            </table>
         </div>
     </div>
     <!-- <div class="chart">

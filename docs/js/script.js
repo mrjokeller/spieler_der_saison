@@ -138,7 +138,7 @@ function loadCompactRankingData(tabId, jsonFile) {
     fetch(`data/${jsonFile}`)
         .then(response => response.json())
         .then(data => {
-            const tableBody = document.getElementById(`compact-ranking-body-${tabId}`);
+            const tableBody = document.getElementById(`compact-ranking-card-body-${tabId}`);
             tableBody.innerHTML = '';
             const rowsToShow = 3;
 
