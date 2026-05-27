@@ -14,13 +14,16 @@ body {
     margin: 0;
 }
 
-.ranking-container {
+.ranking-wrapper {
     max-width: 1200px;
-    margin: 1.5rem auto;
+    padding: 1.5rem;
+    margin: 0 auto;
+}
+
+.ranking-container {
     background-color: var(--dark-gray);
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    padding: 1.5rem;
 }
 
 .ranking-container h2 {
@@ -84,10 +87,6 @@ body {
     .ranking-table td,
     .ranking-table th {
         font-size: 0.75rem;
-    }
-
-    .ranking-container {
-        margin: 1.5rem 2rem;
     }
 
     .compact-ranking-wrapper {
@@ -164,13 +163,12 @@ body {
 /* "Show More"-Button */
 .expand-button {
     display: block;
-    margin: 20px auto;
+    margin: 0.25rem auto;
     padding: 12px 24px;
     background-color: var(--dark-gray);
     color: var(--white);
     border: none;
     border-radius: 4px;
-    font-weight: bold;
     cursor: pointer;
     transition: 0.25s ease-in-out;
 }
@@ -191,19 +189,18 @@ body {
     padding: 8px 16px;
     margin-right: 8px;
     background: var(--medium-gray);
-    border-radius: 100vh;
-    border: 0.75px solid whitesmoke;
+    border-radius: 1rem;
+    border: none;
     color: whitesmoke;
     cursor: pointer;
     font-weight: normal;
     transition: background-color 0.3s;
     position: relative;
-    outline: none;
 }
 
 .tab-button:hover {
     color: white;
-    border: 0.5px solid var(--vfb_red);
+    background-color: var(--light-gray);
 }
 
 .tab-button.active {
@@ -221,8 +218,8 @@ body {
 }
 
 .compact-ranking-wrapper {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     max-width: 1200px;
     margin: 1.5rem auto;
@@ -232,7 +229,7 @@ body {
     flex: 1;
     padding: 1.25rem;
     background-color: var(--dark-gray);
-    border-radius: 8px;
+    border-radius: 1rem;
 }
 
 .compact-ranking-header {
@@ -274,10 +271,6 @@ a {
     color: white;
 }
 
-#home {
-    font-size: small;
-}
-
 .sticky-header {
     position: sticky;
     top: 0;
@@ -292,7 +285,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 16px;
+    padding: 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -369,8 +362,7 @@ footer {
 .player-card {
     background-color: var(--dark-gray);
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
     margin-left: 20px;
     display: flex;
     align-items: center;

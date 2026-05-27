@@ -15,7 +15,7 @@
         <div class="header-content">
             <div id="home">
                 <a href="/">
-                    <img src="media/header-logo.svg" alt="">
+                    <img id="logo" src="media/header-logo.svg" alt="">
                 </a>
             </div>
             <nav class="navbar">
@@ -26,80 +26,83 @@
             </nav>
         </div>
     </header>
-    <div class="ranking-container">
-        <div class="tab-group">
-            <button class="tab-button total-ranking active" data-tab="total">Gesamt</button>
-            <button class="tab-button total-ranking" data-tab="community">Community</button>
-            <button class="tab-button total-ranking" data-tab="riky">Riky</button>
-            <button class="tab-button total-ranking" data-tab="sebastian">Sebastian</button>
-        </div>
+    <div class="ranking-wrapper">
 
-        <div class="tab-content total-ranking active" id="total">
-            <table class="ranking-table" id="total-ranking">
-                <thead>
-                    <tr>
-                        <th>Rang</th>
-                        <th>Spieler</th>
-                        <th>Spiele</th>
-                        <th>Minuten</th>
-                        <th>Punkte/90min</th>
-                        <th>Punkte</th>
-                    </tr>
-                </thead>
-                <tbody id="ranking-body-total"></tbody>
-            </table>
-            <button id="expand-button-total" class="expand-button">Mehr ▼</button>
-        </div>
+        <div class="ranking-container">
+            <div class="tab-group">
+                <button class="tab-button total-ranking active" data-tab="total">Gesamt</button>
+                <button class="tab-button total-ranking" data-tab="community">Community</button>
+                <button class="tab-button total-ranking" data-tab="riky">Riky</button>
+                <button class="tab-button total-ranking" data-tab="sebastian">Sebastian</button>
+            </div>
 
-        <div class="tab-content total-ranking" id="community" style="display: none;">
-            <table class="ranking-table" id="community-ranking">
-                <thead>
-                    <tr>
-                        <th>Rang</th>
-                        <th>Spieler</th>
-                        <th>Spiele</th>
-                        <th>Minuten</th>
-                        <th>Punkte/90min</th>
-                        <th>Punkte</th>
-                    </tr>
-                </thead>
-                <tbody id="ranking-body-community"></tbody>
-            </table>
-            <button id="expand-button-community" class="expand-button">Mehr ▼</button>
-        </div>
+            <div class="tab-content total-ranking active" id="total">
+                <table class="ranking-table" id="total-ranking">
+                    <thead>
+                        <tr>
+                            <th>Rang</th>
+                            <th>Spieler</th>
+                            <th>Spiele</th>
+                            <th>Minuten</th>
+                            <th>Punkte/90min</th>
+                            <th>Punkte</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ranking-body-total"></tbody>
+                </table>
+                <button id="expand-button-total" class="expand-button">Mehr ▼</button>
+            </div>
 
-        <div class="tab-content total-ranking" id="riky" style="display: none;">
-            <table class="ranking-table" id="riky-ranking">
-                <thead>
-                    <tr>
-                        <th>Rang</th>
-                        <th>Spieler</th>
-                        <th>Spiele</th>
-                        <th>Minuten</th>
-                        <th>Punkte/90min</th>
-                        <th>Punkte</th>
-                    </tr>
-                </thead>
-                <tbody id="ranking-body-riky"></tbody>
-            </table>
-            <button id="expand-button-riky" class="expand-button">Mehr ▼</button>
-        </div>
+            <div class="tab-content total-ranking" id="community" style="display: none;">
+                <table class="ranking-table" id="community-ranking">
+                    <thead>
+                        <tr>
+                            <th>Rang</th>
+                            <th>Spieler</th>
+                            <th>Spiele</th>
+                            <th>Minuten</th>
+                            <th>Punkte/90min</th>
+                            <th>Punkte</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ranking-body-community"></tbody>
+                </table>
+                <button id="expand-button-community" class="expand-button">Mehr ▼</button>
+            </div>
 
-        <div class="tab-content total-ranking" id="sebastian" style="display: none;">
-            <table class="ranking-table" id="sebastian-ranking">
-                <thead>
-                    <tr>
-                        <th>Rang</th>
-                        <th>Spieler</th>
-                        <th>Spiele</th>
-                        <th>Minuten</th>
-                        <th>Punkte/90min</th>
-                        <th>Punkte</th>
-                    </tr>
-                </thead>
-                <tbody id="ranking-body-sebastian"></tbody>
-            </table>
-            <button id="expand-button-sebastian" class="expand-button">Mehr ▼</button>
+            <div class="tab-content total-ranking" id="riky" style="display: none;">
+                <table class="ranking-table" id="riky-ranking">
+                    <thead>
+                        <tr>
+                            <th>Rang</th>
+                            <th>Spieler</th>
+                            <th>Spiele</th>
+                            <th>Minuten</th>
+                            <th>Punkte/90min</th>
+                            <th>Punkte</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ranking-body-riky"></tbody>
+                </table>
+                <button id="expand-button-riky" class="expand-button">Mehr ▼</button>
+            </div>
+
+            <div class="tab-content total-ranking" id="sebastian" style="display: none;">
+                <table class="ranking-table" id="sebastian-ranking">
+                    <thead>
+                        <tr>
+                            <th>Rang</th>
+                            <th>Spieler</th>
+                            <th>Spiele</th>
+                            <th>Minuten</th>
+                            <th>Punkte/90min</th>
+                            <th>Punkte</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ranking-body-sebastian"></tbody>
+                </table>
+                <button id="expand-button-sebastian" class="expand-button">Mehr ▼</button>
+            </div>
         </div>
     </div>
 
