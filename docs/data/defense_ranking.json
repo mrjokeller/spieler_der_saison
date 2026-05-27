@@ -12,28 +12,28 @@
         "player_id": 10,
         "player_name": "Maximilian Mittelstädt",
         "shirt_number": 7,
-        "total_points": 56,
+        "total_points": 62,
         "games_played": 50,
         "total_minutes": 3792,
-        "points_per_90_minutes": 1.33
-    },
-    {
-        "player_id": 7,
-        "player_name": "Ramon Hendriks",
-        "shirt_number": 3,
-        "total_points": 53,
-        "games_played": 49,
-        "total_minutes": 3324,
-        "points_per_90_minutes": 1.44
+        "points_per_90_minutes": 1.47
     },
     {
         "player_id": 6,
         "player_name": "Jeff Chabot",
         "shirt_number": 24,
-        "total_points": 52,
+        "total_points": 57,
         "games_played": 41,
         "total_minutes": 3523,
-        "points_per_90_minutes": 1.33
+        "points_per_90_minutes": 1.46
+    },
+    {
+        "player_id": 7,
+        "player_name": "Ramon Hendriks",
+        "shirt_number": 3,
+        "total_points": 55,
+        "games_played": 49,
+        "total_minutes": 3324,
+        "points_per_90_minutes": 1.49
     },
     {
         "player_id": 9,
@@ -57,10 +57,10 @@
         "player_id": 8,
         "player_name": "Luca Jaquez",
         "shirt_number": 14,
-        "total_points": 18,
+        "total_points": 19,
         "games_played": 26,
         "total_minutes": 1622,
-        "points_per_90_minutes": 1.0
+        "points_per_90_minutes": 1.05
     },
     {
         "player_id": 14,

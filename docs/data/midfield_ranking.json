@@ -3,10 +3,10 @@
         "player_id": 18,
         "player_name": "Chris Führich",
         "shirt_number": 10,
-        "total_points": 109,
+        "total_points": 110,
         "games_played": 52,
         "total_minutes": 2627,
-        "points_per_90_minutes": 3.73
+        "points_per_90_minutes": 3.77
     },
     {
         "player_id": 17,
@@ -30,10 +30,10 @@
         "player_id": 15,
         "player_name": "Chema",
         "shirt_number": 30,
-        "total_points": 43,
+        "total_points": 45,
         "games_played": 39,
         "total_minutes": 1935,
-        "points_per_90_minutes": 2.0
+        "points_per_90_minutes": 2.09
     },
     {
         "player_id": 22,

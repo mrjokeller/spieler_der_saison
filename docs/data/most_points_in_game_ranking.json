@@ -52,7 +52,7 @@
         "competition": "Bundesliga",
         "date": "2025-09-13",
         "total_points": 9,
-        "total_points_reference": 52
+        "total_points_reference": 57
     },
     {
         "player_id": 6,
@@ -63,7 +63,7 @@
         "competition": "Europa League",
         "date": "2025-10-23",
         "total_points": 9,
-        "total_points_reference": 52
+        "total_points_reference": 57
     },
     {
         "player_id": 22,
@@ -85,7 +85,7 @@
         "competition": "Bundesliga",
         "date": "2026-03-01",
         "total_points": 8,
-        "total_points_reference": 109
+        "total_points_reference": 110
     },
     {
         "player_id": 18,
@@ -96,7 +96,7 @@
         "competition": "Europa League",
         "date": "2026-03-19",
         "total_points": 8,
-        "total_points_reference": 109
+        "total_points_reference": 110
     },
     {
         "player_id": 10,
@@ -107,7 +107,7 @@
         "competition": "Bundesliga",
         "date": "2026-04-12",
         "total_points": 8,
-        "total_points_reference": 56
+        "total_points_reference": 62
     },
     {
         "player_id": 7,
@@ -118,7 +118,7 @@
         "competition": "Bundesliga",
         "date": "2025-11-30",
         "total_points": 8,
-        "total_points_reference": 53
+        "total_points_reference": 55
     },
     {
         "player_id": 7,
@@ -129,7 +129,7 @@
         "competition": "Bundesliga",
         "date": "2026-01-18",
         "total_points": 8,
-        "total_points_reference": 53
+        "total_points_reference": 55
     },
     {
         "player_id": 7,
@@ -140,7 +140,7 @@
         "competition": "Bundesliga",
         "date": "2026-03-15",
         "total_points": 8,
-        "total_points_reference": 53
+        "total_points_reference": 55
     },
     {
         "player_id": 29,
@@ -151,7 +151,7 @@
         "competition": "Bundesliga",
         "date": "2025-12-14",
         "total_points": 8,
-        "total_points_reference": 52
+        "total_points_reference": 53
     },
     {
         "player_id": 15,
@@ -162,7 +162,7 @@
         "competition": "Europa League",
         "date": "2026-01-29",
         "total_points": 8,
-        "total_points_reference": 43
+        "total_points_reference": 45
     },
     {
         "player_id": 15,
@@ -173,7 +173,7 @@
         "competition": "Bundesliga",
         "date": "2026-05-16",
         "total_points": 8,
-        "total_points_reference": 43
+        "total_points_reference": 45
     },
     {
         "player_id": 3,
@@ -261,7 +261,7 @@
         "competition": "DFB-Pokal",
         "date": "2025-10-29",
         "total_points": 6,
-        "total_points_reference": 18
+        "total_points_reference": 19
     },
     {
         "player_id": 5,

@@ -50,6 +50,16 @@
         "source": "Community"
     },
     {
+        "player_id": 10,
+        "player_name": "Maximilian Mittelstädt",
+        "shirt_number": 7,
+        "total_points": 22,
+        "games_played": 50,
+        "total_minutes": 3792,
+        "points_per_90_minutes": 0.52,
+        "source": "Community"
+    },
+    {
         "player_id": 3,
         "player_name": "Alexander Nübel",
         "shirt_number": 33,
@@ -57,16 +67,6 @@
         "games_played": 49,
         "total_minutes": 4470,
         "points_per_90_minutes": 0.38,
-        "source": "Community"
-    },
-    {
-        "player_id": 10,
-        "player_name": "Maximilian Mittelstädt",
-        "shirt_number": 7,
-        "total_points": 19,
-        "games_played": 50,
-        "total_minutes": 3792,
-        "points_per_90_minutes": 0.45,
         "source": "Community"
     },
     {
@@ -83,20 +83,20 @@
         "player_id": 15,
         "player_name": "Chema",
         "shirt_number": 30,
-        "total_points": 16,
+        "total_points": 17,
         "games_played": 39,
         "total_minutes": 1935,
-        "points_per_90_minutes": 0.74,
+        "points_per_90_minutes": 0.79,
         "source": "Community"
     },
     {
         "player_id": 6,
         "player_name": "Jeff Chabot",
         "shirt_number": 24,
-        "total_points": 12,
+        "total_points": 14,
         "games_played": 41,
         "total_minutes": 3523,
-        "points_per_90_minutes": 0.31,
+        "points_per_90_minutes": 0.36,
         "source": "Community"
     },
     {

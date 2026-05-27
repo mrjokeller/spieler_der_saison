@@ -43,9 +43,19 @@
         "player_id": 29,
         "player_name": "Jamie Leweling",
         "shirt_number": 18,
-        "total_points": 18,
+        "total_points": 19,
         "games_played": 50,
         "total_minutes": 3533,
+        "points_per_90_minutes": 0.48,
+        "source": "Riky Palm"
+    },
+    {
+        "player_id": 6,
+        "player_name": "Jeff Chabot",
+        "shirt_number": 24,
+        "total_points": 18,
+        "games_played": 41,
+        "total_minutes": 3523,
         "points_per_90_minutes": 0.46,
         "source": "Riky Palm"
     },
@@ -57,16 +67,6 @@
         "games_played": 49,
         "total_minutes": 4470,
         "points_per_90_minutes": 0.34,
-        "source": "Riky Palm"
-    },
-    {
-        "player_id": 6,
-        "player_name": "Jeff Chabot",
-        "shirt_number": 24,
-        "total_points": 17,
-        "games_played": 41,
-        "total_minutes": 3523,
-        "points_per_90_minutes": 0.43,
         "source": "Riky Palm"
     },
     {
@@ -90,6 +90,16 @@
         "source": "Riky Palm"
     },
     {
+        "player_id": 7,
+        "player_name": "Ramon Hendriks",
+        "shirt_number": 3,
+        "total_points": 16,
+        "games_played": 49,
+        "total_minutes": 3324,
+        "points_per_90_minutes": 0.43,
+        "source": "Riky Palm"
+    },
+    {
         "player_id": 9,
         "player_name": "Finn Jeltsch",
         "shirt_number": 29,
@@ -100,43 +110,33 @@
         "source": "Riky Palm"
     },
     {
-        "player_id": 7,
-        "player_name": "Ramon Hendriks",
-        "shirt_number": 3,
-        "total_points": 15,
-        "games_played": 49,
-        "total_minutes": 3324,
-        "points_per_90_minutes": 0.41,
-        "source": "Riky Palm"
-    },
-    {
         "player_id": 10,
         "player_name": "Maximilian Mittelstädt",
         "shirt_number": 7,
-        "total_points": 13,
+        "total_points": 14,
         "games_played": 50,
         "total_minutes": 3792,
-        "points_per_90_minutes": 0.31,
+        "points_per_90_minutes": 0.33,
         "source": "Riky Palm"
     },
     {
         "player_id": 15,
         "player_name": "Chema",
         "shirt_number": 30,
-        "total_points": 13,
+        "total_points": 14,
         "games_played": 39,
         "total_minutes": 1935,
-        "points_per_90_minutes": 0.6,
+        "points_per_90_minutes": 0.65,
         "source": "Riky Palm"
     },
     {
         "player_id": 8,
         "player_name": "Luca Jaquez",
         "shirt_number": 14,
-        "total_points": 11,
+        "total_points": 12,
         "games_played": 26,
         "total_minutes": 1622,
-        "points_per_90_minutes": 0.61,
+        "points_per_90_minutes": 0.67,
         "source": "Riky Palm"
     },
     {

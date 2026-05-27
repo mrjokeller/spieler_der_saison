@@ -3,10 +3,10 @@
         "player_id": 18,
         "player_name": "Chris Führich",
         "shirt_number": 10,
-        "total_points": 37,
+        "total_points": 38,
         "games_played": 52,
         "total_minutes": 2627,
-        "points_per_90_minutes": 1.27,
+        "points_per_90_minutes": 1.3,
         "source": "Sebastian Rose"
     },
     {
@@ -33,20 +33,20 @@
         "player_id": 10,
         "player_name": "Maximilian Mittelstädt",
         "shirt_number": 7,
-        "total_points": 24,
+        "total_points": 26,
         "games_played": 50,
         "total_minutes": 3792,
-        "points_per_90_minutes": 0.57,
+        "points_per_90_minutes": 0.62,
         "source": "Sebastian Rose"
     },
     {
         "player_id": 6,
         "player_name": "Jeff Chabot",
         "shirt_number": 24,
-        "total_points": 23,
+        "total_points": 25,
         "games_played": 41,
         "total_minutes": 3523,
-        "points_per_90_minutes": 0.59,
+        "points_per_90_minutes": 0.64,
         "source": "Sebastian Rose"
     },
     {
@@ -103,10 +103,10 @@
         "player_id": 7,
         "player_name": "Ramon Hendriks",
         "shirt_number": 3,
-        "total_points": 11,
+        "total_points": 12,
         "games_played": 49,
         "total_minutes": 3324,
-        "points_per_90_minutes": 0.3,
+        "points_per_90_minutes": 0.32,
         "source": "Sebastian Rose"
     },
     {

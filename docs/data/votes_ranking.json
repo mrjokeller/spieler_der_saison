@@ -3,13 +3,13 @@
         "player_id": 31,
         "player_name": "Deniz Undav",
         "shirt_number": 26,
-        "total_votes": 3861
+        "total_votes": 3865
     },
     {
         "player_id": 18,
         "player_name": "Chris Führich",
         "shirt_number": 10,
-        "total_votes": 3714
+        "total_votes": 3757
     },
     {
         "player_id": 17,
@@ -21,49 +21,49 @@
         "player_id": 27,
         "player_name": "Ermedin Demirovic",
         "shirt_number": 9,
-        "total_votes": 2772
+        "total_votes": 2776
     },
     {
         "player_id": 7,
         "player_name": "Ramon Hendriks",
         "shirt_number": 3,
-        "total_votes": 2489
+        "total_votes": 2574
     },
     {
         "player_id": 29,
         "player_name": "Jamie Leweling",
         "shirt_number": 18,
-        "total_votes": 2370
+        "total_votes": 2382
     },
     {
         "player_id": 10,
         "player_name": "Maximilian Mittelstädt",
         "shirt_number": 7,
-        "total_votes": 2042
+        "total_votes": 2192
     },
     {
         "player_id": 3,
         "player_name": "Alexander Nübel",
         "shirt_number": 33,
-        "total_votes": 1759
+        "total_votes": 1771
     },
     {
         "player_id": 24,
         "player_name": "Angelo Stiller",
         "shirt_number": 6,
-        "total_votes": 1580
+        "total_votes": 1590
     },
     {
         "player_id": 6,
         "player_name": "Jeff Chabot",
         "shirt_number": 24,
-        "total_votes": 1375
+        "total_votes": 1469
     },
     {
         "player_id": 15,
         "player_name": "Chema",
         "shirt_number": 30,
-        "total_votes": 1354
+        "total_votes": 1446
     },
     {
         "player_id": 22,
@@ -75,7 +75,7 @@
         "player_id": 9,
         "player_name": "Finn Jeltsch",
         "shirt_number": 29,
-        "total_votes": 1010
+        "total_votes": 1011
     },
     {
         "player_id": 30,
@@ -102,16 +102,16 @@
         "total_votes": 566
     },
     {
+        "player_id": 8,
+        "player_name": "Luca Jaquez",
+        "shirt_number": 14,
+        "total_votes": 438
+    },
+    {
         "player_id": 13,
         "player_name": "Josha Vagnoman",
         "shirt_number": 4,
         "total_votes": 398
-    },
-    {
-        "player_id": 8,
-        "player_name": "Luca Jaquez",
-        "shirt_number": 14,
-        "total_votes": 370
     },
     {
         "player_id": 26,

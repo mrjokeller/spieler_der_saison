@@ -9,7 +9,7 @@
         "player_id": 18,
         "player_name": "Chris Führich",
         "shirt_number": 10,
-        "total_points": 54
+        "total_points": 55
     },
     {
         "player_id": 3,
@@ -21,19 +21,25 @@
         "player_id": 6,
         "player_name": "Jeff Chabot",
         "shirt_number": 24,
-        "total_points": 36
+        "total_points": 41
     },
     {
         "player_id": 29,
         "player_name": "Jamie Leweling",
         "shirt_number": 18,
-        "total_points": 34
+        "total_points": 35
     },
     {
         "player_id": 27,
         "player_name": "Ermedin Demirovic",
         "shirt_number": 9,
         "total_points": 31
+    },
+    {
+        "player_id": 10,
+        "player_name": "Maximilian Mittelstädt",
+        "shirt_number": 7,
+        "total_points": 29
     },
     {
         "player_id": 30,
@@ -54,22 +60,16 @@
         "total_points": 25
     },
     {
-        "player_id": 10,
-        "player_name": "Maximilian Mittelstädt",
-        "shirt_number": 7,
-        "total_points": 23
-    },
-    {
         "player_id": 7,
         "player_name": "Ramon Hendriks",
         "shirt_number": 3,
-        "total_points": 21
+        "total_points": 23
     },
     {
         "player_id": 15,
         "player_name": "Chema",
         "shirt_number": 30,
-        "total_points": 18
+        "total_points": 20
     },
     {
         "player_id": 20,
@@ -78,16 +78,16 @@
         "total_points": 17
     },
     {
+        "player_id": 8,
+        "player_name": "Luca Jaquez",
+        "shirt_number": 14,
+        "total_points": 15
+    },
+    {
         "player_id": 22,
         "player_name": "Nikolas Nartey",
         "shirt_number": 28,
         "total_points": 15
-    },
-    {
-        "player_id": 8,
-        "player_name": "Luca Jaquez",
-        "shirt_number": 14,
-        "total_points": 14
     },
     {
         "player_id": 9,
