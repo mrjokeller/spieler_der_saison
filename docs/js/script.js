@@ -1,4 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    hamburger.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
     // Standardmäßig die Gesamtplatzierung laden
     loadRankingData('total', 'player_ranking.json');
     loadRankingData('community', 'player_ranking_community.json');
