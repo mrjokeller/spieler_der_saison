@@ -89,14 +89,6 @@ body {
         font-size: 0.75rem;
     }
 
-    .compact-ranking-wrapper {
-        flex-direction: column;
-    }
-
-    .compact-ranking-container {
-        margin: 1.5rem 2rem;
-    }
-
     .shirt-number {
         display: none;
     }
@@ -238,6 +230,13 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     max-width: 1200px;
+}
+
+@media (max-width: 768px) {
+    .compact-ranking-container {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .compact-ranking-card {
