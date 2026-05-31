@@ -3,10 +3,10 @@
         "player_id": 18,
         "player_name": "Chris Führich",
         "shirt_number": 10,
-        "total_points": 110,
+        "total_points": 109,
         "games_played": 52,
         "total_minutes": 2627,
-        "points_per_90_minutes": 3.77
+        "points_per_90_minutes": 3.73
     },
     {
         "player_id": 31,
@@ -75,10 +75,10 @@
         "player_id": 29,
         "player_name": "Jamie Leweling",
         "shirt_number": 18,
-        "total_points": 53,
+        "total_points": 54,
         "games_played": 50,
         "total_minutes": 3533,
-        "points_per_90_minutes": 1.35
+        "points_per_90_minutes": 1.38
     },
     {
         "player_id": 24,

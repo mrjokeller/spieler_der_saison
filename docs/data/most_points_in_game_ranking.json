@@ -85,7 +85,7 @@
         "competition": "Bundesliga",
         "date": "2026-03-01",
         "total_points": 8,
-        "total_points_reference": 110
+        "total_points_reference": 109
     },
     {
         "player_id": 18,
@@ -96,7 +96,7 @@
         "competition": "Europa League",
         "date": "2026-03-19",
         "total_points": 8,
-        "total_points_reference": 110
+        "total_points_reference": 109
     },
     {
         "player_id": 10,
@@ -151,7 +151,7 @@
         "competition": "Bundesliga",
         "date": "2025-12-14",
         "total_points": 8,
-        "total_points_reference": 53
+        "total_points_reference": 54
     },
     {
         "player_id": 15,

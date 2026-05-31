@@ -13,10 +13,10 @@
         "player_id": 18,
         "player_name": "Chris Führich",
         "shirt_number": 10,
-        "total_points": 33,
+        "total_points": 32,
         "games_played": 52,
         "total_minutes": 2627,
-        "points_per_90_minutes": 1.13,
+        "points_per_90_minutes": 1.1,
         "source": "Riky Palm"
     },
     {
@@ -30,6 +30,16 @@
         "source": "Riky Palm"
     },
     {
+        "player_id": 29,
+        "player_name": "Jamie Leweling",
+        "shirt_number": 18,
+        "total_points": 20,
+        "games_played": 50,
+        "total_minutes": 3533,
+        "points_per_90_minutes": 0.51,
+        "source": "Riky Palm"
+    },
+    {
         "player_id": 17,
         "player_name": "Bilal El Khannouss",
         "shirt_number": 11,
@@ -37,16 +47,6 @@
         "games_played": 41,
         "total_minutes": 2588,
         "points_per_90_minutes": 0.66,
-        "source": "Riky Palm"
-    },
-    {
-        "player_id": 29,
-        "player_name": "Jamie Leweling",
-        "shirt_number": 18,
-        "total_points": 19,
-        "games_played": 50,
-        "total_minutes": 3533,
-        "points_per_90_minutes": 0.48,
         "source": "Riky Palm"
     },
     {
