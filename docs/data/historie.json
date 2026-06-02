@@ -1,5 +1,12 @@
 [
     {
+        "player_id": 18,
+        "player_name": "Chris Führich",
+        "shirt_number": 10,
+        "total_points": 109,
+        "season": "2025-2026"
+    },
+    {
         "player_id": 24,
         "player_name": "Angelo Stiller",
         "shirt_number": 6,
