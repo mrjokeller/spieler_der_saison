@@ -1,43 +1,58 @@
 from typing import List, Dict, Any
 
 
-def prepare_chart_data(data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+def build_progression_chart_data(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """
-    Converts data into chart.js compatible data.
+    Formt die Rohdaten aus stats.points_progression in Chart.js-kompatibles
+    Format um: ein Objekt pro Spieler mit label + data-Array.
     """
-    chart_data = []
-    for row in data:
-        print(row)
-        chart_data.append(
-            {
-                "label": row["label"],
-                "data": [int(x) for x in row["data"].split(",")],
+    players: dict[int, dict[str, Any]] = {}
+
+    for row in rows:
+        pid = row["player_id"]
+        if pid not in players:
+            players[pid] = {"label": row["player_name"], "data": []}
+        players[pid]["data"].append(row["points"])
+
+    return list(players.values())
+
+
+def longest_streak(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """
+    Erwartet Rohdaten aus points_progression (pro Spieler, chronologisch,
+    kumulierte Punkte pro Spiel-Sequenz) und berechnet die längste Serie
+    aufeinanderfolgender Spiele mit Punktezuwachs.
+    """
+    players: dict[int, dict[str, Any]] = {}
+
+    for row in rows:
+        pid = row["player_id"]
+        if pid not in players:
+            players[pid] = {
+                "player_id": pid,
+                "player_name": row["player_name"],
+                "_previous_points": 0,
+                "_current_streak": 0,
+                "longest_streak": 0,
             }
-        )
-    return chart_data
 
-def longest_streak(data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-    streaks = []
-    for row in data:
-        points = [int(x.strip()) for x in row['data_points'].split(',')]
+        player = players[pid]
+        if row["points"] > player["_previous_points"]:
+            player["_current_streak"] += 1
+            player["longest_streak"] = max(
+                player["longest_streak"], player["_current_streak"]
+            )
+        else:
+            player["_current_streak"] = 0
 
-        max_streak = 0
-        current_streak = 0
-        previous_points = 0
+        player["_previous_points"] = row["points"]
 
-        for point in points:
-            if point > previous_points:
-                current_streak += 1
-                max_streak = max(max_streak, current_streak)
-            else:
-                current_streak = 0
-            previous_points = point
-        
-        streaks.append(
-            {
-                'player_name': row['player_name'], 
-                'longest_streak': max_streak
-            }
-        )
-    
-    return sorted(streaks, key=lambda x: x['longest_streak'], reverse=True)
+    result = [
+        {
+            "player_id": p["player_id"],
+            "player_name": p["player_name"],
+            "longest_streak": p["longest_streak"],
+        }
+        for p in players.values()
+    ]
+    return sorted(result, key=lambda x: x["longest_streak"], reverse=True)

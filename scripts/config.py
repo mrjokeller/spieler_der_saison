@@ -1,12 +1,12 @@
 import os
+from pathlib import Path
 
-# default directory of the script
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = Path(__file__).resolve().parent.parent
 
-# paths to data and exports
-DB_PATH = os.path.join(SCRIPT_DIR, "../data/data.db")
-JSON_PATH = os.path.join(SCRIPT_DIR, "../docs/data/")
-TEST_JSON_PATH = os.path.join(SCRIPT_DIR, "../tests/data/")
+DB_PATH = BASE_DIR / "data" / "data.db"
+JSON_OUTPUT_PATH = BASE_DIR / "docs" / "data"
+TEST_JSON_OUTPUT_PATH = BASE_DIR / "tests" / "data"
 
-# default database
-DEFAULT_DB_NAME = DB_PATH
+IS_TEST = os.getenv("SDS_ENV") == "test"
+
+EXPORT_PATH = TEST_JSON_OUTPUT_PATH if IS_TEST else JSON_OUTPUT_PATH

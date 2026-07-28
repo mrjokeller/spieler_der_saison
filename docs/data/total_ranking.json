@@ -1,0 +1,282 @@
+[
+  {
+    "player_id": 18,
+    "player_name": "Chris Führich",
+    "shirt_number": 10,
+    "position_name": "Mittelfeld",
+    "games_played": 51,
+    "total_minutes": 5167,
+    "total_points": 109,
+    "points_per_90": 1.9
+  },
+  {
+    "player_id": 31,
+    "player_name": "Deniz Undav",
+    "shirt_number": 26,
+    "position_name": "Angriff",
+    "games_played": 45,
+    "total_minutes": 6939,
+    "total_points": 107,
+    "points_per_90": 1.39
+  },
+  {
+    "player_id": 3,
+    "player_name": "Alexander Nübel",
+    "shirt_number": 33,
+    "position_name": "Tor",
+    "games_played": 49,
+    "total_minutes": 7860,
+    "total_points": 71,
+    "points_per_90": 0.81
+  },
+  {
+    "player_id": 17,
+    "player_name": "Bilal El Khannouss",
+    "shirt_number": 11,
+    "position_name": "Mittelfeld",
+    "games_played": 41,
+    "total_minutes": 4502,
+    "total_points": 66,
+    "points_per_90": 1.32
+  },
+  {
+    "player_id": 10,
+    "player_name": "Maximilian Mittelstädt",
+    "shirt_number": 7,
+    "position_name": "Abwehr",
+    "games_played": 49,
+    "total_minutes": 5837,
+    "total_points": 62,
+    "points_per_90": 0.96
+  },
+  {
+    "player_id": 27,
+    "player_name": "Ermedin Demirovic",
+    "shirt_number": 9,
+    "position_name": "Angriff",
+    "games_played": 37,
+    "total_minutes": 3824,
+    "total_points": 62,
+    "points_per_90": 1.46
+  },
+  {
+    "player_id": 6,
+    "player_name": "Jeff Chabot",
+    "shirt_number": 24,
+    "position_name": "Abwehr",
+    "games_played": 40,
+    "total_minutes": 5626,
+    "total_points": 57,
+    "points_per_90": 0.91
+  },
+  {
+    "player_id": 7,
+    "player_name": "Ramon Hendriks",
+    "shirt_number": 3,
+    "position_name": "Abwehr",
+    "games_played": 49,
+    "total_minutes": 4765,
+    "total_points": 55,
+    "points_per_90": 1.04
+  },
+  {
+    "player_id": 24,
+    "player_name": "Angelo Stiller",
+    "shirt_number": 6,
+    "position_name": "Mittelfeld",
+    "games_played": 51,
+    "total_minutes": 6661,
+    "total_points": 50,
+    "points_per_90": 0.68
+  },
+  {
+    "player_id": 29,
+    "player_name": "Jamie Leweling",
+    "shirt_number": 18,
+    "position_name": "Angriff",
+    "games_played": 49,
+    "total_minutes": 4791,
+    "total_points": 47,
+    "points_per_90": 0.88
+  },
+  {
+    "player_id": 15,
+    "player_name": "Chema",
+    "shirt_number": 30,
+    "position_name": "Mittelfeld",
+    "games_played": 38,
+    "total_minutes": 3207,
+    "total_points": 42,
+    "points_per_90": 1.18
+  },
+  {
+    "player_id": 22,
+    "player_name": "Nikolas Nartey",
+    "shirt_number": 28,
+    "position_name": "Mittelfeld",
+    "games_played": 37,
+    "total_minutes": 2661,
+    "total_points": 39,
+    "points_per_90": 1.32
+  },
+  {
+    "player_id": 9,
+    "player_name": "Finn Jeltsch",
+    "shirt_number": 29,
+    "position_name": "Abwehr",
+    "games_played": 36,
+    "total_minutes": 3867,
+    "total_points": 35,
+    "points_per_90": 0.81
+  },
+  {
+    "player_id": 30,
+    "player_name": "Tiago Tomas",
+    "shirt_number": 8,
+    "position_name": "Angriff",
+    "games_played": 39,
+    "total_minutes": 2318,
+    "total_points": 33,
+    "points_per_90": 1.28
+  },
+  {
+    "player_id": 20,
+    "player_name": "Atakan Karazor",
+    "shirt_number": 16,
+    "position_name": "Mittelfeld",
+    "games_played": 43,
+    "total_minutes": 4240,
+    "total_points": 22,
+    "points_per_90": 0.47
+  },
+  {
+    "player_id": 5,
+    "player_name": "Lorenz Assignon",
+    "shirt_number": 22,
+    "position_name": "Abwehr",
+    "games_played": 36,
+    "total_minutes": 3036,
+    "total_points": 19,
+    "points_per_90": 0.56
+  },
+  {
+    "player_id": 8,
+    "player_name": "Luca Jaquez",
+    "shirt_number": 14,
+    "position_name": "Abwehr",
+    "games_played": 25,
+    "total_minutes": 2380,
+    "total_points": 19,
+    "points_per_90": 0.72
+  },
+  {
+    "player_id": 14,
+    "player_name": "Dan-Axel Zagadou",
+    "shirt_number": 23,
+    "position_name": "Abwehr",
+    "games_played": 5,
+    "total_minutes": 555,
+    "total_points": 14,
+    "points_per_90": 2.27
+  },
+  {
+    "player_id": 13,
+    "player_name": "Josha Vagnoman",
+    "shirt_number": 4,
+    "position_name": "Abwehr",
+    "games_played": 39,
+    "total_minutes": 2314,
+    "total_points": 7,
+    "points_per_90": 0.27
+  },
+  {
+    "player_id": 26,
+    "player_name": "Badredine Bouanani",
+    "shirt_number": 27,
+    "position_name": "Angriff",
+    "games_played": 28,
+    "total_minutes": 1238,
+    "total_points": 7,
+    "points_per_90": 0.51
+  },
+  {
+    "player_id": 1,
+    "player_name": "Fabian Bredlow",
+    "shirt_number": 1,
+    "position_name": "Tor",
+    "games_played": 3,
+    "total_minutes": 270,
+    "total_points": 3,
+    "points_per_90": 1.0
+  },
+  {
+    "player_id": 4,
+    "player_name": "Ameen Al-Dakhil",
+    "shirt_number": 2,
+    "position_name": "Abwehr",
+    "games_played": 8,
+    "total_minutes": 499,
+    "total_points": 3,
+    "points_per_90": 0.54
+  },
+  {
+    "player_id": 19,
+    "player_name": "Lazar Jovanovic",
+    "shirt_number": 45,
+    "position_name": "Mittelfeld",
+    "games_played": 6,
+    "total_minutes": 209,
+    "total_points": 3,
+    "points_per_90": 1.29
+  },
+  {
+    "player_id": 32,
+    "player_name": "Nick Woltemade",
+    "shirt_number": 11,
+    "position_name": "Angriff",
+    "games_played": 2,
+    "total_minutes": 237,
+    "total_points": 2,
+    "points_per_90": 0.76
+  },
+  {
+    "player_id": 25,
+    "player_name": "Yanik Spalt",
+    "shirt_number": 56,
+    "position_name": "Mittelfeld",
+    "games_played": 1,
+    "total_minutes": 9,
+    "total_points": 1,
+    "points_per_90": 10.0
+  },
+  {
+    "player_id": 33,
+    "player_name": "Jeremy Arevalo",
+    "shirt_number": 25,
+    "position_name": "Angriff",
+    "games_played": 7,
+    "total_minutes": 36,
+    "total_points": 1,
+    "points_per_90": 2.5
+  },
+  {
+    "player_id": 11,
+    "player_name": "Pascal Stenzel",
+    "shirt_number": 15,
+    "position_name": "Abwehr",
+    "games_played": 2,
+    "total_minutes": 107,
+    "total_points": 0,
+    "points_per_90": 0.0
+  },
+  {
+    "player_id": 12,
+    "player_name": "Leonidas Stergiou",
+    "shirt_number": 20,
+    "position_name": "Abwehr",
+    "games_played": 2,
+    "total_minutes": 1,
+    "total_points": 0,
+    "points_per_90": 0.0
+  }
+]
